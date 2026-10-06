@@ -286,6 +286,23 @@ details.inline-toc a.l4{padding-left:28px;font-size:13.5px}
 .reader-content .read-btn{display:none}
 .reader canvas{position:absolute;left:0;top:0;touch-action:none;cursor:crosshair}
 .reader.scrolling canvas{pointer-events:none}
+
+/* ---------- topic overview ---------- */
+.subs{list-style:none;margin:36px 0 0;padding:0;counter-reset:none}
+.subs li.sub{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;border-top:1px solid var(--rule)}
+.subs li.sub:last-child{border-bottom:1px solid var(--rule)}
+.subs .num{font-family:var(--display);font-size:44px;line-height:.9;color:var(--muted);opacity:.55}
+.subs li.ready .num{color:var(--brass);opacity:1}
+.sub-name{font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.35;text-decoration:none}
+.sub-name:hover{color:var(--link)}
+.sub-st{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.subs li.ready .sub-st{color:var(--brass);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips a{font-size:13.5px;text-decoration:none;padding:6px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--surface);line-height:1.3}
+.chips a:hover{border-color:var(--brass);color:var(--brass)}
+@media (max-width:600px){.subs li.sub{grid-template-columns:40px 1fr;gap:12px}.subs .num{font-size:34px}}
+.partno{font-size:13.5px;font-weight:600;color:var(--brass);margin:0 0 8px}
+h1.title.sub-title{font-size:clamp(34px,4.6vw,52px);max-width:22ch}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.bar,.rail,.progress,.pager,details.inline-toc{display:none!important}}
 </style>
@@ -919,8 +936,8 @@ details.inline-toc a.l4{padding-left:28px;font-size:13.5px}
 </table></div>
 
 </template>
-<template id="notes-human-interface">
-<h2 id="h1">ESSENCE, DETERMINANTS AND CONSEQUENCES OF ETHICS IN HUMAN ACTIONS</h2>
+<template id="notes-human-interface--essence">
+
 <h3 id="h2">Essence of Ethics — Its Core Nature</h3>
 <h4 class="rd" id="h3">A. Meaning of 'Values' and 'Ethics'; Interrelation; Link to Professional Competence</h4>
 <h5>"Values"</h5>
@@ -969,7 +986,7 @@ details.inline-toc a.l4{padding-left:28px;font-size:13.5px}
 <li><p><strong>Competence is a force-multiplier, not a moral compass</strong> — the more competent someone is, the <em>more</em> consequential their ethical direction becomes, for better or worse.</p></li>
 <li><p><strong>Long-term institutional legitimacy requires both</strong> — an institution seen as competent-but-corrupt eventually loses public confidence regardless of its technical outputs; an institution seen as well-meaning-but-incompetent fails to actually deliver for citizens. <strong>Only the combination sustains legitimate governance over time.</strong></p></li>
 </ul>
-<div class="pyq-box" id="ehi-q1"><p class="pyq-q"><strong>PYQ. What do you understand by 'values' and 'ethics'? In what way is it important to be ethical along with being professionally competent? (2013, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q1"><p class="pyq-q"><strong>PYQ. What do you understand by 'values' and 'ethics'? In what way is it important to be ethical along with being professionally competent? (2013, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 <em>"It is the greatest happiness of the greatest number that is the measure of right and wrong,"</em> said Bentham — yet even the most efficient pursuit of outcomes means little without an ethical compass guiding it. Values and ethics together supply that compass, without which competence alone can turn destructive.</p><h5>Meaning of Values and Ethics</h5><ul>
 <li><p><strong>Values:</strong> Enduring beliefs about preferable conduct and end-states (Rokeach) — the "why" behind action, e.g., honesty, service</p></li>
 <li><p><strong>Ethics:</strong> Reasoned principles governing right conduct toward others — values filtered through reason and social responsibility</p></li>
@@ -990,7 +1007,7 @@ Competence builds capacity; ethics gives it direction. Without ethics, competenc
 
 
 
-<div class="pyq-box" id="ehi-q2"><p class="pyq-q"><strong>PYQ. Owing to paucity of time, a university professor generates a Ph.D. evaluation report using Artificial Intelligence and submits it with some modifications. Discuss this from the perspective of accountability and integrity. (150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q2"><p class="pyq-q"><strong>PYQ. Owing to paucity of time, a university professor generates a Ph.D. evaluation report using Artificial Intelligence and submits it with some modifications. Discuss this from the perspective of accountability and integrity. (150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Kant's Second Formulation demands humanity never be treated merely as a means — here, a professor delegates the very evaluative judgment his office demands, then submits it as his own, raising a real accountability gap.</p><h5>Accountability Concerns</h5><ul>
 <li><p>Evaluation is a discretionary academic judgment, not mere data processing — recall Weber's "legal-rational authority": the office, not a machine, is entrusted with this specific responsibility</p></li>
 <li><p>AI outputs can be opaque and reflect algorithmic bias (Cathy O'Neil) — the professor cannot fully vouch for reasoning he didn't personally construct</p></li>
@@ -1043,7 +1060,7 @@ Efficiency can never substitute for accountable, transparent academic integrity 
 <p><strong>The tension only becomes sharp precisely where personal loyalty/relationship collides with the impartiality a professional role demands</strong>.</p>
 <p><strong>An Important Nuance: When Should Personal Ethics Yield to Professional Ethics — and Are There Limits?</strong></p>
 <p><strong>In the overwhelming majority of ordinary situations, professional ethics should take precedence over personal loyalty specifically because impartiality is the very foundation of legitimate public service</strong> — but professional rules themselves must remain open to ethical scrutiny, not treated as beyond question.</p>
-<div class="pyq-box" id="ehi-q3"><p class="pyq-q"><strong>PYQ. Differentiate between Personal ethics and Professional ethics. (2015, 50 words/2.5 marks)</strong></p><div class="pyq-a"><ul>
+<div class="pyq-box" id="ehi1-q3"><p class="pyq-q"><strong>PYQ. Differentiate between Personal ethics and Professional ethics. (2015, 50 words/2.5 marks)</strong></p><div class="pyq-a"><ul>
 <li><p><strong>Personal ethics:</strong> Individual's private moral principles, shaped by upbringing and conscience; particularist — legitimately allows partiality toward loved ones (e.g., prioritizing family over strangers)</p></li>
 <li><p><strong>Professional ethics:</strong> Codified, role-bound standards demanding impartiality and uniformity, regardless of personal relationship (e.g., Ashok Khemka upholding rules despite personal cost)</p></li>
 </ul><p><strong>Core distinction:</strong> Partiality (personal) vs. Impartiality (professional).</p></div></div>
@@ -1191,7 +1208,7 @@ Efficiency can never substitute for accountable, transparent academic integrity 
 <h5>Amartya Sen's Contribution</h5>
 <p>Nobel laureate <strong>Amartya Sen</strong> has argued that even a single culture (including Indian tradition itself) contains <strong>multiple, competing internal ethical voices</strong>, not one monolithic "cultural" position. In his book <em>The Argumentative Indian</em> (2005), Sen specifically argues that Indian intellectual tradition has always contained vigorous internal debate — including strong strands of scepticism, rationalism, and heterodoxy (he points to figures like the Buddha, and even materialist/atheist schools within classical Indian philosophy) — alongside more orthodox positions.</p>
 <p><strong>This is a powerful point against simplistic relativism</strong>: if even a single culture doesn't speak with one voice, the relativist claims that "morality is just whatever a given culture believes" becomes much harder to state coherently — <em>which</em> voice within that culture gets to count as "the" cultural position?</p>
-<div class="pyq-box" id="ehi-q4"><p class="pyq-q"><strong>PYQ. Some people feel that values keep changing with time and situation, while others strongly believe there are certain universal and eternal human values. Give your perception with due justification. (2013, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q4"><p class="pyq-q"><strong>PYQ. Some people feel that values keep changing with time and situation, while others strongly believe there are certain universal and eternal human values. Give your perception with due justification. (2013, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 The UN's Universal Declaration of Human Rights (1948) recognizes <em>"the inherent dignity... of all members of the human family"</em> — a claim that values are not culturally granted, but universally rooted. Yet history also shows moral beliefs visibly changing. Reconciling both requires distinguishing variation in <em>belief</em> from variation in <em>truth</em>.</p><h5>The Universalist View</h5><ul>
 <li><p>Kant's Categorical Imperative — derived from pure reason, applicable to any rational being, anywhere</p></li>
 <li><p>Without a universal core, atrocities like the Holocaust could only be called "disapproved of," not <em>actually</em> wrong</p></li>
@@ -1274,7 +1291,7 @@ Values are neither wholly eternal nor wholly relative — a universal moral core
 <li><p><strong>Gandhi's Salt March (1930)</strong>: Gandhi could have pursued independence through violent means (which some contemporaries, like factions within the revolutionary movement, advocated) but insisted the <em>means</em> of non-violent civil disobedience were as important as the <em>end</em> of independence itself, because impure means would corrupt the very freedom eventually won.</p></li>
 <li><p><strong>Contrast case — engineers/contractors using substandard materials</strong> for faster, cheaper infrastructure completion (a desirable end) is a real, recurring illustration of exactly why unethical means corrupt even an outwardly good-looking outcome — several real building and bridge collapses in India trace directly to this exact means-corruption.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q5"><p class="pyq-q"><strong>PYQ. With regard to morality of actions, one view is that means are of paramount importance and the other view is that the ends justify the means. Which view do you think is more appropriate? Justify your answer. (2018, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q5"><p class="pyq-q"><strong>PYQ. With regard to morality of actions, one view is that means are of paramount importance and the other view is that the ends justify the means. Which view do you think is more appropriate? Justify your answer. (2018, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Gandhi wrote in <em>Hind Swaraj</em>: <em>"Means are, after all, everything. As the means, so the end."</em> This insight — that means shape the moral character of the end itself — anchors why means deserve primacy in ethical action.</p><h5>"Ends Justify Means" — Limitations</h5><ul>
 <li><p>Machiavelli's position: political necessity can override conventional morality</p></li>
 <li><p>Infinitely abusable — any actor can claim "the end was good" after the fact</p></li>
@@ -1296,7 +1313,7 @@ As Gandhi's Salt March showed, ethical means and ethical ends are not substitute
 
 
 
-<div class="pyq-box" id="ehi-q6"><p class="pyq-q"><strong>PYQ. Shakespeare in Henry IV says, "The arms are fair when the intent of bearing them is just." What ethical implications does this have in governance? (150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q6"><p class="pyq-q"><strong>PYQ. Shakespeare in Henry IV says, "The arms are fair when the intent of bearing them is just." What ethical implications does this have in governance? (150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Where Gandhi insisted "means are, after all, everything," Shakespeare's line offers a subtler claim: the same instrument — arms, power, authority — is judged not by its form, but by the justice of the intent behind its use.</p><h5>Unpacking the Quotation</h5><ul>
 <li><p>"Arms" here stand for any instrument of power or coercion — in governance, this maps to state authority, police power, surveillance, or force</p></li>
 <li><p>The line argues intent, not the tool itself, determines moral legitimacy — a genuinely deontological claim (recall Kant's emphasis on the "good will" behind an act, not merely its outcome)</p></li>
@@ -1520,7 +1537,7 @@ Governance tools are morally neutral; only just intent, transparently held, can 
 <p><strong>A sharp, contemporary illustration:</strong> the <strong>2008 Global Financial Crisis</strong> remains the definitive case study — many of the practices that triggered the crisis (bundling toxic subprime mortgages into securities misleadingly rated as safe) were, at the time, <strong>entirely legal</strong>. The crisis demonstrated, at devastating global scale, what happens when a critical mass of market participants pursue legal-but-ethically-hollow behaviour — showing that <strong>regulation alone, without an underlying ethical culture of fair dealing, is insufficient</strong> to prevent systemic collapse.</p>
 <p><strong>India's own contemporary illustration:</strong> the extraordinary scale of India's <strong>UPI (Unified Payments Interface)</strong> digital payment ecosystem — processing billions of transactions monthly — functions at a scale <strong>no regulator could individually verify in real time.</strong> It depends fundamentally on a broad, shared trust and ethical expectation of honest dealing among millions of daily users and small merchants, with formal dispute-resolution mechanisms serving only as a rare backstop, not the everyday operating mechanism.</p>
 <p><em>"Durkheim's collective conscience crystallizes into formal institutions; Hart's 'internal point of view' explains why law needs voluntary legitimacy, not just enforcement; Putnam's social capital research empirically demonstrates that democratic effectiveness tracks a society's civic trust; and Adam Smith — better remembered for the invisible hand — himself grounded market exchange in natural moral sentiment. Together, they show that law, democracy, and markets are formal systems designed to handle the exception — the rare bad actor — while their everyday, large-scale functioning depends on a background of shared ethical commitment that no institution can manufacture through coercion alone."</em></p>
-<div class="pyq-box" id="ehi-q7"><p class="pyq-q"><strong>PYQ. Without commonly shared and widely entrenched moral values and obligations, neither the law, nor democratic government, nor even the market economy will function properly. What do you understand by this statement? Explain with illustration in the contemporary times. (2017, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q7"><p class="pyq-q"><strong>PYQ. Without commonly shared and widely entrenched moral values and obligations, neither the law, nor democratic government, nor even the market economy will function properly. What do you understand by this statement? Explain with illustration in the contemporary times. (2017, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Durkheim argued that social order is fundamentally a <em>moral</em> phenomenon before a legal one — formal institutions merely crystallize a society's pre-existing ethical consensus, they don't create it.</p><h5>Law</h5><ul>
 <li><p>H.L.A. Hart: legal systems need citizens' voluntary "internal point of view," not just fear of punishment — enforcement resources are always limited</p></li>
 <li><p><em>Example:</em> India's tax system relies on honest self-reporting; audits are a rare backstop, not the everyday mechanism</p></li>
@@ -1575,7 +1592,7 @@ Formal institutions handle the exception; shared ethical commitment sustains the
 <li><p><strong>Kailash Satyarthi</strong> — his life clearly involved forgoing hedonic comfort (a stable engineering career) in favour of Engagement (decades of hands-on rescue work), Relationships (the community of activists and rescued children he's built), Meaning (child rights), and Accomplishment (Nobel Peace Prize, 2014) — a textbook PERMA profile, achieved specifically <em>through</em> ethically-driven sacrifice.</p></li>
 <li><p><strong>A contrasting illustration</strong>, drawing on the hedonic treadmill concept directly: individuals who achieve extraordinary wealth through ethically compromised means, and are later widely documented (in numerous public accounts, biographies, and interviews) describing persistent anxiety, isolation, or emptiness, illustrate hedonic gain without eudaimonic fulfilment — precisely the Brickman-Campbell finding that external gain, however large, fails to produce lasting happiness on its own.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q8"><p class="pyq-q"><strong>PYQ. All human beings aspire for happiness. Do you agree? What does happiness mean to you? Explain with examples. (2014, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q8"><p class="pyq-q"><strong>PYQ. All human beings aspire for happiness. Do you agree? What does happiness mean to you? Explain with examples. (2014, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Aristotle observed that whatever we choose — wealth, honour, pleasure — we choose partly for happiness's sake, but we never choose happiness for anything further. It is, in his words, "complete" and "self-sufficient" — the final end all human striving serves.</p><h5>Do I Agree? — Two Kinds of Happiness</h5><ul>
 <li><p><strong>Hedonic:</strong> pleasant feeling, life satisfaction — but psychologists Brickman and Campbell found even lottery winners return to baseline happiness within a year (the "hedonic treadmill")</p></li>
 <li><p><strong>Eudaimonic:</strong> durable flourishing — Seligman's PERMA framework: Positive emotion, Engagement, Relationships, Meaning, Accomplishment</p></li>
@@ -1630,7 +1647,7 @@ I agree happiness is universally sought — but genuine, lasting happiness is eu
 <li><p><strong>Swachh Bharat Abhiyan</strong> — now citable through Durkheim's organic-solidarity lens: its success depended on ethically-managed cooperation across genuinely different actors (government, municipal workers, citizens, private sanitation contractors) — each performing a distinct, specialized role, bound together by shared ethical commitment to a collective goal.</p></li>
 <li><p><strong>Contrast case, using Arrow's "lack of mutual confidence":</strong> the persistence of widespread traffic-rule violations in many Indian cities can be read precisely as an Arrow-style trust deficit — a society where the general expectation that "others will also follow the rules" has eroded, producing a self-reinforcing cycle where individual rule-following feels irrational (why should I stop at a red light if everyone else runs it?) — illustrating how ethical erosion becomes genuinely self-perpetuating once the "collective conscience" (Durkheim) around a norm weakens.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q9"><p class="pyq-q"><strong>PYQ. Explain how ethics contributes to social and human well-being. (2016, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q9"><p class="pyq-q"><strong>PYQ. Explain how ethics contributes to social and human well-being. (2016, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Kenneth Arrow observed that virtually every transaction embeds an element of trust, and much of the world's economic backwardness stems from a <em>"lack of mutual confidence."</em> Ethics is precisely what builds that confidence — the invisible foundation of social and human well-being.</p><h5>Trust as Social Capital</h5><ul>
 <li>Putnam: social capital — networks of reciprocity and trustworthiness — correlates with better governance, health, and economic outcomes; grows with use, shrinks with betrayal</li>
 </ul><h5>Social Harmony</h5><ul>
@@ -1681,7 +1698,7 @@ Ethical conduct compounds into trust, trust sustains cohesion, and cohesion sust
 <ul>
 <li><strong>E. Sreedharan</strong> (Delhi Metro, Konkan Railway) vs the <strong>2G Spectrum</strong> and <strong>Coal Allocation ("Coalgate") scams</strong> — both illustrate Weber's point precisely: the same structural features (discretionary power, public resources, legal-rational office-based authority) produced either enormous public good or enormous public harm, depending entirely on the ethical conduct of the individual officeholders temporarily entrusted with that office's authority.</li>
 </ul>
-<div class="pyq-box" id="ehi-q10"><p class="pyq-q"><strong>PYQ. What does ethics seek to promote in human life? Why is it all the more important in public administration? (2014, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q10"><p class="pyq-q"><strong>PYQ. What does ethics seek to promote in human life? Why is it all the more important in public administration? (2014, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Max Weber distinguished "legal-rational authority" — where power belongs to the office, not the person — from traditional authority. This distinction explains precisely why ethics carries extra weight for a civil servant.</p><h5>What Ethics Promotes</h5><ul>
 <li><p>Individual flourishing (Aristotle's <em>eudaimonia</em>) and psychological coherence</p></li>
 <li><p>Societal trust, harmony, and cohesion (Putnam, Durkheim)</p></li>
@@ -1699,7 +1716,7 @@ Ethics in public administration isn't personal virtue alone — it is the very f
 
 
 
-<div class="pyq-box" id="ehi-q11"><p class="pyq-q"><strong>PYQ. It is believed that adherence to ethics in human actions would ensure smooth functioning of an organization/system. If so, what does ethics seek to promote in human life? How do ethical values assist in the resolution of conflicts faced by him in his day-to-day functioning? (2022, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q11"><p class="pyq-q"><strong>PYQ. It is believed that adherence to ethics in human actions would ensure smooth functioning of an organization/system. If so, what does ethics seek to promote in human life? How do ethical values assist in the resolution of conflicts faced by him in his day-to-day functioning? (2022, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Public servants constantly navigate competing claims — political pressure versus procedure, efficiency versus fairness. Ethics supplies the reasoned method for resolving such conflicts.</p><h5>What Ethics Promotes</h5><ul>
 <li><p>Conscience-driven conduct and self-respect at the individual level</p></li>
 <li><p>Trust and cohesion that sustain institutions (Putnam, Durkheim)</p></li>
@@ -1756,7 +1773,7 @@ Ethical values transform administrative conflict from a contest of power into a 
 <li><p><strong>India's vaccine diplomacy</strong> — spans all three components at once, and now precisely explainable through Nye's own "moral authority" framing.</p></li>
 <li><p><strong>Contrast:</strong> Nations whose development strategy has relied heavily on extractive, corrupt institutions — even where they possess considerable natural resources or military capacity — frequently show weaker CNP overall, since Becker's human-capital degradation and Putnam's trust-erosion undermine the very foundations, sustainable national power requires.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q12"><p class="pyq-q"><strong>PYQ. Discuss the role of ethics and values in enhancing the three major components of Comprehensive National Power (CNP) viz. human capital, soft power (culture and policies) and social harmony. (2020, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q12"><p class="pyq-q"><strong>PYQ. Discuss the role of ethics and values in enhancing the three major components of Comprehensive National Power (CNP) viz. human capital, soft power (culture and policies) and social harmony. (2020, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Joseph Nye, who coined the term "soft power," defined it as <em>"the ability to get what you want through attraction rather than coercion,"</em> arising from culture, values, and policies perceived as possessing <strong>moral authority</strong>. This single definition reveals why ethics underlies all three components of CNP.</p><h5>Ethics and Human Capital</h5><ul>
 <li><p>Gary Becker's human capital framework treats skills and health as genuine capital</p></li>
 <li><p>Corruption directly degrades this capital — purchased degrees, diverted medicines — not just public finances</p></li>
@@ -1812,7 +1829,7 @@ Human capital, soft power, and social harmony are trust-and-perception-based, no
 <li><p><strong>Institutional reinforcement</strong> — recall Schein's organizational culture model: institutions that genuinely <em>reward</em> integrity (level 3, basic underlying assumptions), not merely proclaim it (level 2, espoused values), counter the broader materialistic drift.</p></li>
 <li><p><strong>Philosophical grounding</strong> — engaging with traditions like the Gita's <em>Nishkama Karma</em> (selfless duty without attachment to reward) offers a genuinely rooted, non-Western alternative to purely material success metrics — directly countering Fromm's "having mode" with an ancient articulation of the "being mode."</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q13"><p class="pyq-q"><strong>PYQ. The crisis of ethical values in modern times is traced to a narrow perception of the good life. Discuss. (2017, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi1-q13"><p class="pyq-q"><strong>PYQ. The crisis of ethical values in modern times is traced to a narrow perception of the good life. Discuss. (2017, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Erich Fromm, in <em>To Have or to Be?</em> distinguished the "having" mode of existence — identity through possession — from the "being" mode — identity through growth and contribution. Modern society's collapse into the having mode is precisely the narrow perception of the good life this crisis traces to.</p><h5>The Narrow Perception</h5><ul>
 <li><p>Good life reduced to wealth, status, consumption — Seligman's eudaimonic dimensions (Engagement, Relationships, Meaning, Accomplishment) sidelined</p></li>
 <li><p>Success measured by possession, not character or contribution</p></li>
@@ -1834,7 +1851,10 @@ Reversing this crisis requires restoring character and contribution, not comfort
 
 
 
-<h2 id="h22">DIMENSIONS OF ETHICS</h2>
+
+</template>
+<template id="notes-human-interface--dimensions">
+
 <h3 id="h23">Understanding "Dimensions" of ethics</h3>
 <h4 class="rd" id="h24">A. Why Ethics Is Studied Through "Dimensions" Rather Than as One Flat Concept</h4>
 <h5>The Core Problem with Treating Ethics as "One Thing"</h5>
@@ -1905,13 +1925,13 @@ Reversing this crisis requires restoring character and contribution, not comfort
 </tr>
 </tbody>
 </table></div>
-<div class="pyq-box" id="ehi-q14"><p class="pyq-q"><strong>PYQ. Differentiate between Law and Ethics. (2015, 50 words/2.5 marks)</strong></p><div class="pyq-a"><ul>
+<div class="pyq-box" id="ehi2-q1"><p class="pyq-q"><strong>PYQ. Differentiate between Law and Ethics. (2015, 50 words/2.5 marks)</strong></p><div class="pyq-a"><ul>
 <li><p><strong>Law:</strong> Formal, state-enforced rules backed by coercion (Austin: "command of the sovereign"); narrow, codified scope</p></li>
 <li><p><strong>Ethics:</strong> Internal, reasoned principles of right conduct, self-enforced through conscience; broader, uncodified scope</p></li>
 </ul><p><strong>Core distinction:</strong> External coercion (law) vs. internal conviction (ethics).</p></div></div>
 
 
-<div class="pyq-box" id="ehi-q15"><p class="pyq-q"><strong>PYQ. Law and ethics are considered to be the two tools for controlling human conduct so as to make it conducive to civilized social existence: (a) Discuss how they achieve this objective (75 words/5 marks); (b) Giving examples, show how the two differ in their approaches (75 words/5 marks)</strong></p><div class="pyq-a"><h5>(a) How They Achieve Civilized Social Existence</h5><p>Both law and ethics regulate conduct to prevent harm and enable cooperation.</p><p>Law does so externally — through codified rules backed by state coercion, ensuring predictable, universal compliance. Ethics does so internally — through conscience and reasoned conviction, securing genuine, self-motivated compliance even where enforcement is absent.</p><p>As Hart noted, the most effective laws are those citizens accept from an "internal point of view," not mere fear — meaning the two tools function best when they reinforce, not merely parallel, each other.</p><h5>(b) How They Differ, With Examples</h5><ul>
+<div class="pyq-box" id="ehi2-q2"><p class="pyq-q"><strong>PYQ. Law and ethics are considered to be the two tools for controlling human conduct so as to make it conducive to civilized social existence: (a) Discuss how they achieve this objective (75 words/5 marks); (b) Giving examples, show how the two differ in their approaches (75 words/5 marks)</strong></p><div class="pyq-a"><h5>(a) How They Achieve Civilized Social Existence</h5><p>Both law and ethics regulate conduct to prevent harm and enable cooperation.</p><p>Law does so externally — through codified rules backed by state coercion, ensuring predictable, universal compliance. Ethics does so internally — through conscience and reasoned conviction, securing genuine, self-motivated compliance even where enforcement is absent.</p><p>As Hart noted, the most effective laws are those citizens accept from an "internal point of view," not mere fear — meaning the two tools function best when they reinforce, not merely parallel, each other.</p><h5>(b) How They Differ, With Examples</h5><ul>
 <li><p><strong>Source:</strong> Law comes from state authority; ethics from individual conscience and reason</p></li>
 <li><p><strong>Enforcement:</strong> Law is coercive (fines, imprisonment); ethics is self-regulating (guilt, social disapproval)</p></li>
 <li><p><strong>Scope:</strong> Law is narrow, covering only codified violations; ethics is broader, covering all conduct</p></li>
@@ -1961,7 +1981,7 @@ Reversing this crisis requires restoring character and contribution, not comfort
 <h5>Why This Matters for a Civil Servant</h5>
 <p>A public servant who internalizes Stewart's distinction gains a genuinely important professional safeguard: <strong>"I have the legal authority to do this" can never, by itself, be treated as the end of ethical inquiry.</strong></p>
 <p>Every exercise of discretionary power — however legally sound — deserves a second, independent question: <em>is this also the right thing to do?</em> This is precisely the discipline that separates an officer who merely avoids prosecution from one who genuinely earns public trust.</p>
-<div class="pyq-box" id="ehi-q16"><p class="pyq-q"><strong>Q. "Ethics is knowing the difference between what you have the right to do and what is right to do." — Potter Stewart. What does this quotation mean to you? (2022, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q3"><p class="pyq-q"><strong>Q. "Ethics is knowing the difference between what you have the right to do and what is right to do." — Potter Stewart. What does this quotation mean to you? (2022, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Potter Stewart, a US Supreme Court Justice, is also known for another famous line — <em>"I know it when I see it."</em> Both quotes reveal a jurist deeply aware of law's limits: the gap between what can be codified and what can only be judged by conscience.</p><h5>Unpacking the Quotation</h5><ul>
 <li><p><strong>"Right to do"</strong> = legal entitlement — mere permission, not virtue</p></li>
 <li><p><strong>"Right to do"</strong> (moral) = ethical obligation — what fairness and conscience genuinely demand</p></li>
@@ -1984,7 +2004,7 @@ Stewart's insight separates an official who merely avoids prosecution from one w
 
 
 
-<div class="pyq-box" id="ehi-q17"><p class="pyq-q"><strong>PYQ. Dr. B. R. Ambedkar had cautioned that employing civil disobedience within a constitutional democracy equates to endorsing 'anarchy'. How should modern democracies navigate the ethical dilemmas posed by civil disobedience movements that aim to promote social justice against policies that may raise genuine concerns? (150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q4"><p class="pyq-q"><strong>PYQ. Dr. B. R. Ambedkar had cautioned that employing civil disobedience within a constitutional democracy equates to endorsing 'anarchy'. How should modern democracies navigate the ethical dilemmas posed by civil disobedience movements that aim to promote social justice against policies that may raise genuine concerns? (150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Ambedkar warned that once constitutional channels exist, civil disobedience risks becoming "the grammar of anarchy" — yet Gandhi's Salt March and MLK's "moral responsibility to disobey unjust laws" show disobedience has also driven genuine justice. Reconciling these is this question's real demand.</p><h5>Ambedkar's Concern</h5><ul>
 <li><p>In a functioning constitutional democracy, methods like satyagraha and civil disobedience are unnecessary, since the Constitution provides legitimate avenues — elections, courts, legislative reform — for grievance redressal</p></li>
 <li><p>Unchecked disobedience against a democratically elected government risks legitimizing lawlessness generally, undermining the very constitutional order needed for justice to be reliably delivered at all</p></li>
@@ -2035,7 +2055,7 @@ Civil disobedience is ethically defensible only as a constitutionally-exhausted,
 <li><p>If preferential treatment persists <strong>beyond the point where it remains genuinely remedial</strong> — if it becomes a permanent entitlement disconnected from actual, continuing disadvantage — it risks reproducing the very structure it was meant to correct, now disadvantaging a <em>different</em> group on grounds that are, at that point, similarly disconnected from individual merit or need.</p></li>
 <li><p>This is precisely why the <strong>"creamy layer"</strong> concept from <em>Indra Sawhney</em> matters — it's an attempt to keep preferential treatment tethered to its Rawlsian/Senian justification (correcting genuine, continuing disadvantage), rather than letting it drift into an unexamined, permanent entitlement untethered from its original justificatory logic.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q18"><p class="pyq-q"><strong>PYQ. Differentiate between Discrimination and Preferential treatment. (2015, 50 words/2.5 marks)</strong></p><div class="pyq-a"><ul>
+<div class="pyq-box" id="ehi2-q5"><p class="pyq-q"><strong>PYQ. Differentiate between Discrimination and Preferential treatment. (2015, 50 words/2.5 marks)</strong></p><div class="pyq-a"><ul>
 <li><p><strong>Discrimination:</strong> Unjust treatment based on a morally irrelevant characteristic (caste, gender), disadvantaging individuals without justification — prohibited under Article 15</p></li>
 <li><p><strong>Preferential treatment:</strong> Deliberate favouring of structurally disadvantaged groups to correct documented inequality (Article 16(4)) — remedial, not arbitrary</p></li>
 </ul><p><strong>Core distinction:</strong> Discrimination is arbitrary disadvantage; preferential treatment is justified correction of real, structural disadvantage.</p></div></div>
@@ -2073,7 +2093,7 @@ Civil disobedience is ethically defensible only as a constitutionally-exhausted,
 <p><strong>Why this connects to "Justice, Equality and Impartiality based on Indian culture and ethos"?</strong></p>
 <p><strong>Indian philosophical and legal tradition — going back to the concept of <em>Dharma</em> and <em>nyaya</em> (from which the BNS draws its very name) — has historically understood justice as something broader than mechanical retribution</strong>, closer to <em>restoring right order</em> (Plato's "harmony" idea, arrived at independently in Indian tradition too) — making the BNS's stated shift a claimed <em>return</em> to indigenous conceptions of justice, rather than a wholly novel Western import.</p>
 <p><strong>A necessary critical balance:</strong> whether the BNS's actual provisions achieve a genuine restorative/distributive shift, or largely retain retributive structure under a renamed framework, remains a matter of ongoing legal and academic debate.</p>
-<div class="pyq-box" id="ehi-q19"><p class="pyq-q"><strong>PYQ. "The concept of Just and Unjust is contextual. What was just a year back, may turn out to be unjust in today's context. Changing context should be constantly under scrutiny to prevent miscarriage of justice." Examine the above statement with suitable examples. (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q6"><p class="pyq-q"><strong>PYQ. "The concept of Just and Unjust is contextual. What was just a year back, may turn out to be unjust in today's context. Changing context should be constantly under scrutiny to prevent miscarriage of justice." Examine the above statement with suitable examples. (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Plato defined justice as "harmony" — right ordering within the individual and the state. Yet what counts as "right ordering" is never static; it is continuously reinterpreted as society's understanding of dignity matures.</p><h5>The Constant Principle, Evolving Application</h5><ul>
 <li><p>Justice's underlying principle — proportionate, dignity-respecting treatment — remains constant</p></li>
 <li><p>What counts as "proportionate" or "fair" shifts as social and moral understanding evolves</p></li>
@@ -2090,7 +2110,7 @@ Justice is not a fixed formula but a continuously recalibrated practice — vigi
 
 
 
-<div class="pyq-box" id="ehi-q20"><p class="pyq-q"><strong>PYQ. The soul of the new law, Bharatiya Nyaya Sanhita (BNS) is Justice, Equality and Impartiality based on Indian culture and ethos. Discuss this in the light of major shift from a doctrine of punishment to justice in the present judicial system. (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q7"><p class="pyq-q"><strong>PYQ. The soul of the new law, Bharatiya Nyaya Sanhita (BNS) is Justice, Equality and Impartiality based on Indian culture and ethos. Discuss this in the light of major shift from a doctrine of punishment to justice in the present judicial system. (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 The colonial Indian Penal Code (1860) was an instrument of retributive control; the Bharatiya Nyaya Sanhita (2023) claims a shift toward justice rooted in Indian ethos — <em>nyaya</em>, understood as restored right order, not mere punishment.</p><h5>From Punishment to Justice</h5><ul>
 <li><p><strong>IPC:</strong> retributive justice — proportionate punishment reflecting colonial authority over a subject population</p></li>
 <li><p><strong>BNS:</strong> claimed shift toward restorative and distributive elements — community service for minor offences, greater emphasis on victim compensation</p></li>
@@ -2196,7 +2216,7 @@ The BNS's stated shift represents less a novel import than a claimed return to i
 <li><p><strong>Humility about disagreement</strong> — recognizing that colleagues who reach different ethical conclusions may be weighting different, equally legitimate moral foundations (Haidt's theory) rather than simply "reasoning worse" — this fosters more productive institutional dialogue than assuming disagreement always reflects someone's reasoning failure.</p></li>
 <li><p><strong>Training design</strong> — institutional ethics training is more effective when it engages intuition (through vivid case studies, storytelling, social modelling) rather than relying purely on abstract theoretical instruction.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q21"><p class="pyq-q"><strong>PYQ. Differentiate 'moral intuition' from 'moral reasoning' with suitable examples. (2023, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q8"><p class="pyq-q"><strong>PYQ. Differentiate 'moral intuition' from 'moral reasoning' with suitable examples. (2023, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Psychologist Jonathan Haidt likened moral judgment to <em>"the emotional dog and its rational tail"</em> — arguing intuition typically moves first, with reasoning following as justification, not cause.</p><h5>Moral Intuition</h5><ul>
 <li><p>Immediate, automatic, emotionally-charged judgment, arising without conscious deliberation</p></li>
 <li><p><em>Example:</em> Instinctively feeling a sibling-incest scenario is wrong, even when no harm can be identified — Haidt's "moral dumbfounding" studies show people maintain such verdicts even after every offered reason is refuted</p></li>
@@ -2354,7 +2374,7 @@ Intuition supplies the fast, felt signal; reasoning supplies deliberate scrutiny
 <p>(2) <strong>Moral Judgment</strong> — he reasoned that these irregularities constituted genuine wrongdoing requiring action;</p>
 <p>(3) <strong>Moral Motivation</strong> — he prioritized this judgment over the clear, repeated career costs (57 transfers) that competing loyalty to the institutional/political hierarchy would have suggested;</p>
 <p>(4) <strong>Moral Character/Implementation</strong> — he actually executed this judgment repeatedly, sustained over an entire career, despite obstacles.</p>
-<div class="pyq-box" id="ehi-q22"><p class="pyq-q"><strong>PYQ. "Ethics encompasses several key dimensions that are crucial in guiding individuals and organizations towards morally responsible behaviour." Explain the key dimensions of ethics that influence human actions. Discuss how these dimensions shape ethical decision-making in the professional context. (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q9"><p class="pyq-q"><strong>PYQ. "Ethics encompasses several key dimensions that are crucial in guiding individuals and organizations towards morally responsible behaviour." Explain the key dimensions of ethics that influence human actions. Discuss how these dimensions shape ethical decision-making in the professional context. (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Psychologist James Rest's Four-Component Model identifies how ethical action actually unfolds — Sensitivity, Judgment, Motivation, and Implementation — providing the precise lens through which ethics' many dimensions shape real decision-making.</p><h5>Key Dimensions Influencing Human Action</h5><ul>
 <li><p><strong>Legal:</strong> relationship between law and rightness</p></li>
 <li><p><strong>Fairness/Justice:</strong> distribution, discrimination, proportionality</p></li>
@@ -2431,7 +2451,7 @@ Most ethical failures occur not from flawed reasoning alone, but from a breakdow
 </ul>
 <h5>An Important Balancing Point — Avoiding Naive Ecocentrism</h5>
 <p>Pure ecocentrism, taken to its extreme, can produce <strong>genuinely difficult trade-offs against human welfare</strong> — strict prioritization of ecosystem integrity over human development can conflict sharply with the legitimate developmental needs of poor, marginalized communities. <strong>This is exactly why most serious environmental ethics, in practice, doesn't advocate pure ecocentrism, but a carefully weighted balance</strong>.</p>
-<div class="pyq-box" id="ehi-q23"><p class="pyq-q"><strong>PYQ. What is meant by 'environmental ethics'? Why is it important to study? Discuss any one environmental issue from the viewpoint of environmental ethics. (2015, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q10"><p class="pyq-q"><strong>PYQ. What is meant by 'environmental ethics'? Why is it important to study? Discuss any one environmental issue from the viewpoint of environmental ethics. (2015, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Aldo Leopold, founder of the "Land Ethic," wrote: <em>"A thing is right when it tends to preserve the integrity, stability, and beauty of the biotic community. It is wrong when it tends otherwise."</em> This captures environmental ethics' central, radical question: do we owe moral consideration to non-human life?</p><p><strong>Meaning of Environmental Ethics</strong><br/>
 Environmental ethics examines humans' moral relationship with nature — asking what obligations we owe to ecosystems, species, and future generations, extending ethics beyond the human-to-human relationships classical theories were built around.</p><h5>Why Important to Study</h5><ul>
 <li><p>Climate crisis is fundamentally an ethical problem — harm and fairness across space and generations</p></li>
@@ -2467,7 +2487,7 @@ A genuinely ethical response draws on both views — protecting human welfare wh
 <h5>A Necessary Critical Balance</h5>
 <p><strong>Development itself is not the ethical failure; the specific <em>mode</em> of development — driven by narrow, "having"-mode greed rather than genuine human flourishing, and structurally externalizing its costs onto the powerless and the unborn — is the failure.</strong></p>
 <p>This distinction matters, because a public servant genuinely must balance environmental protection against real, legitimate development needs of the poor — the goal is <strong>ethically-conscious, intergenerationally-fair development</strong>, not the abandonment of development altogether.</p>
-<div class="pyq-box" id="ehi-q24"><p class="pyq-q"><strong>PYQ. Global warming and climate change are the outcomes of human greed in the name of development, indicating the direction in which extinction of organisms including human beings is heading towards loss of life on Earth. How do you put an end to this to protect life and bring equilibrium between the society and the environment? (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q11"><p class="pyq-q"><strong>PYQ. Global warming and climate change are the outcomes of human greed in the name of development, indicating the direction in which extinction of organisms including human beings is heading towards loss of life on Earth. How do you put an end to this to protect life and bring equilibrium between the society and the environment? (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Economist Nicholas Stern called climate change <em>"the greatest market failure the world has seen"</em> — not merely a technical crisis, but a moral one, where the costs of our choices fall on those who never consented to bear them.</p><h5>Diagnosing the Failure</h5><ul>
 <li><p>Fromm's "having" mode — endless acquisition with no internal stopping point — is structurally incompatible with ecological limits</p></li>
 <li><p><strong>Intergenerational injustice:</strong> Rawls's "Just Savings Principle" — each generation owes a fair share of resources to those who follow; the Haudenosaunee's "Seven Generations Principle" articulated this centuries ago</p></li>
@@ -2485,7 +2505,7 @@ The answer is not abandoning development but reorienting it — from greed-drive
 
 
 
-<div class="pyq-box" id="ehi-q25"><p class="pyq-q"><strong>PYQ. A business house is working on a project that could displace a forest community from their habitat. As the administrative officer of that district, what ethical challenges are you likely to face? (150w/10m)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q12"><p class="pyq-q"><strong>PYQ. A business house is working on a project that could displace a forest community from their habitat. As the administrative officer of that district, what ethical challenges are you likely to face? (150w/10m)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 This is not a conflict between legitimate development and illegitimate obstruction, but between two genuine values — economic development and a vulnerable community's right to its habitat — sitting precisely at the intersection of environmental ethics and the constitutional mandate under Article 46 toward weaker sections.</p><h5>Key Ethical Challenges</h5><ul>
 <li><p><strong>Genuine consent versus hollow consultation:</strong> ensuring the community has authentic voice, not a bureaucratically-adequate but substantively meaningless procedure</p></li>
 <li><p><strong>Compensation versus genuine restoration:</strong> monetary compensation often fails to restore the actual capability lost — forest-dependent livelihood, and cultural and spiritual ties to land, do not transfer to a cash sum</p></li>
@@ -2544,7 +2564,7 @@ The genuine ethical task is not choosing between development and community prote
 <p>(1) treating "national security" as an automatic trump card requiring no ethical scrutiny at all, and</p>
 <p>(2) treating environmental protection as an absolute that can never yield to genuine, demonstrated security necessity.</p>
 <p><strong>The honest solution is that this is a domain requiring continuous, case-by-case <em>phronesis</em></strong> — exactly the kind of practical wisdom Aristotle argued cannot be reduced to a fixed formula, precisely because each specific border project involves a different configuration of ecological fragility, security necessity, and community impact.</p>
-<div class="pyq-box" id="ehi-q26"><p class="pyq-q"><strong>PYQ. Keeping the national security in mind, examine the ethical dilemmas related to controversies over environmental clearance of development projects in ecologically sensitive border areas in the country. (2025, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q13"><p class="pyq-q"><strong>PYQ. Keeping the national security in mind, examine the ethical dilemmas related to controversies over environmental clearance of development projects in ecologically sensitive border areas in the country. (2025, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Border regions are often ecologically fragile precisely because historical security restrictions inadvertently preserved them from intensive development — creating a genuine paradox where security and ecology have not always been opposed, but now collide sharply over infrastructure projects.</p><p><strong>The Core Dilemma</strong><br/>
 Two legitimate ethical duties — protecting citizens' security (Article 21) and preserving ecological integrity — genuinely conflict. Kant's Second Formulation cuts both ways: neither local tribal communities nor citizens' security can be treated as a mere means to the other's end.</p><h5>A Diagnostic Tool: Doctrine of Double Effect</h5><ul>
 <li><p>Is the security action itself legitimate? Generally yes</p></li>
@@ -2613,7 +2633,7 @@ This is not a choice between a legitimate and illegitimate value, but between tw
 <li><p><strong>Predictive policing and facial recognition deployment</strong> in various Indian states raises precisely the O'Neil-style concerns — opacity, scale, and potential for reinforcing existing biases in policing data.</p></li>
 <li><p><strong>Contrast case:</strong> AI-assisted disaster prediction and epidemic modelling (genuinely valuable <em>inputs</em> that inform, but don't replace, human policy decisions about lockdowns, evacuation, and resource allocation) represents the "human-in-the-loop" model working well.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q27"><p class="pyq-q"><strong>PYQ. Impact of digital technology as reliable source of input for rational decision making is a debatable issue. Critically evaluate with suitable example. (2021, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q14"><p class="pyq-q"><strong>PYQ. Impact of digital technology as reliable source of input for rational decision making is a debatable issue. Critically evaluate with suitable example. (2021, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Data scientist Cathy O'Neil warned that harmful algorithms share three traits — they are opaque, scalable, and damaging. This captures precisely why digital technology's role as a decision input remains genuinely debatable.</p><h5>The Case For</h5><ul>
 <li><p>Reduces human bias and inconsistency — an algorithm applies the same criteria to every case</p></li>
 <li><p>Processes complexity beyond unaided human cognitive capacity — useful in epidemic modelling, resource planning</p></li>
@@ -2631,7 +2651,7 @@ Digital technology sharpens decision-making only when paired with human ethical 
 
 
 
-<div class="pyq-box" id="ehi-q28"><p class="pyq-q"><strong>PYQ. The application of Artificial Intelligence as a dependable source of input for administrative rational decision-making is a debatable issue. Critically examine the statement from the ethical point of view. (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q15"><p class="pyq-q"><strong>PYQ. The application of Artificial Intelligence as a dependable source of input for administrative rational decision-making is a debatable issue. Critically examine the statement from the ethical point of view. (2024, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Philosopher Philippa Foot's 1967 Trolley Problem, once a philosophy-seminar hypothetical, is now literally coded into AI decision logic — showing how administrative AI adoption forces abstract ethics into concrete engineering choices.</p><h5>Ethical Concerns With AI in Administration</h5><ul>
 <li><p><strong>Algorithmic bias:</strong> Cathy O'Neil's framework — opaque, scalable, damaging feedback loops — perpetuates past discrimination under an "objective" mathematical guise</p></li>
 <li><p><strong>Procedural injustice:</strong> opaque "black box" reasoning denies citizens genuine opportunity to contest adverse decisions</p></li>
@@ -2676,7 +2696,7 @@ AI is a valuable input into administrative rationality, but moral motivation and
 <li><p><strong>India's IT Rules, 2021 (and subsequent amendments)</strong> — established a grievance redressal mechanism and traceability requirements for significant social media intermediaries, representing India's own regulatory attempt to balance platform accountability against free expression.</p></li>
 <li><p><strong>Digital literacy education</strong> — cultivating citizens' critical reasoning capacity to evaluate information sources is a more durable, deontologically-respectful solution than pure top-down censorship, which risks its own ethical problems (free-speech restriction).</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q29"><p class="pyq-q"><strong>PYQ. In the present digital age, social media has revolutionised our way of communication and interaction. However, it has raised several ethical issues and challenges. Describe the key ethical dilemmas in this regard. (2025, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi2-q16"><p class="pyq-q"><strong>PYQ. In the present digital age, social media has revolutionised our way of communication and interaction. However, it has raised several ethical issues and challenges. Describe the key ethical dilemmas in this regard. (2025, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Former Google design ethicist Tristan Harris described social media platforms as engaged in a "race to the bottom of the brain stem" — structurally incentivized by advertising revenue to maximize engagement over truth or wellbeing. This explains why social media's ethical dilemmas are not accidental, but built into its business model.</p><h5>Key Ethical Dilemmas</h5><ul>
 <li><p><strong>Misinformation:</strong> An MIT study (Aral et al., 2018, <em>Science</em>) found false news is nearly 70% more likely to be retweeted than true news, eroding the shared factual ground societies need to reason together</p></li>
 <li><p><strong>Privacy:</strong> Shoshana Zuboff's "surveillance capitalism" — platforms extract behavioural data without genuine informed consent, treating users instrumentally rather than as ends in themselves</p></li>
@@ -2709,7 +2729,10 @@ Addressing these dilemmas requires algorithmic transparency, platform accountabi
 </ul>
 <h5>Why This Matters for a Civil Servant</h5>
 <p>An officer implementing any data-collecting government scheme — biometric welfare targeting, digital surveillance for law enforcement, e-governance data systems — is directly implementing decisions that trigger exactly this ethical and constitutional tension. <strong>The Proportionality test gives a genuinely usable, structured framework</strong> for evaluating whether a specific data-collection or surveillance measure crosses from legitimate governance into unjustified privacy violation.</p>
-<h2 id="h47">ETHICS IN PRIVATE AND PUBLIC RELATIONSHIPS</h2>
+
+</template>
+<template id="notes-human-interface--private-public">
+
 <h3 id="h48">Understanding the Private-Public Distinction in Ethics</h3>
 <h4 class="rd" id="h49">A. What "Private" and "Public" Relationships Mean in an Ethical (Not Just Legal) Sense</h4>
 <p>Let's open with a distinction that sounds obvious until you actually try to draw its boundary precisely. A judge and her husband are having dinner. He mentions, in passing, a business dispute his friend is having — a dispute that happens to be scheduled for her court next week. <strong>Is this a private conversation between spouses, or has it already become a public-ethics matter the moment the subject matter touched her official role?</strong> Most people's intuition says something shifted the instant that topic came up — even though nothing "public" happened in any formal sense. This is exactly the boundary this section exists to map.</p>
@@ -2783,7 +2806,7 @@ Addressing these dilemmas requires algorithmic transparency, platform accountabi
 <li><p><strong>Walzer's "dirty hands" concept</strong> offers the most intellectually honest resolution: politics <em>can</em> create genuine moral tragedies where every choice involves some wrong — but recognizing this as <strong>tragedy</strong> (a leader who <em>feels</em> the weight of the wrong even while choosing it) is categorically different from <strong>Machiavellian cynicism</strong> (treating the wrong as costless or irrelevant). <strong>A politician who never experiences dirty hands as dirty has stopped being ethical altogether; one who navigates them with genuine moral seriousness remains within ethics, even while making hard compromises.</strong></p></li>
 <li><p><strong>The deeper distinction</strong>: it's not "politics vs ethics" but <strong>"ethic of conviction" vs "ethic of responsibility"</strong> — both are genuinely ethical frameworks, and a mature political actor uses responsibility-weighted judgment without ever fully abandoning the constraints conviction-based ethics still imposes (recall Ross's <em>prima facie</em> duties — responsibility can outweigh a duty in a specific case without erasing that duty's claim entirely).</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q30"><p class="pyq-q"><strong>PYQ. It is often said that 'politics' and 'ethics' do not go together. What is your opinion in this regard? Justify your answer with illustrations. (2013, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi3-q1"><p class="pyq-q"><strong>PYQ. It is often said that 'politics' and 'ethics' do not go together. What is your opinion in this regard? Justify your answer with illustrations. (2013, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Machiavelli argued a ruler must learn "how not to be good" when necessity demands — yet Gandhi's political success, built entirely on refusing this separation, suggests the claim deserves closer scrutiny than blanket acceptance.</p><h5>The Case for Incompatibility</h5><ul>
 <li><p>Michael Walzer's "Problem of Dirty Hands" — political leaders sometimes face situations where every option involves genuine wrongdoing</p></li>
 <li><p>Max Weber distinguished the "ethic of conviction" from the "ethic of responsibility" — political leadership demands weighing real-world consequences, sometimes at odds with rigid personal principle</p></li>
@@ -2827,7 +2850,7 @@ Politics and ethics can coexist — but only when political responsibility is ex
 <p><strong>4. Consumerism and advertising:</strong> modern advertising, particularly algorithmically-targeted advertising exploiting psychological vulnerabilities, treats the consumer's attention and psychological weaknesses as raw material to be exploited for profit — rather than engaging the consumer as a rational agent capable of genuine, autonomous choice.</p>
 <h5>A Necessary Balancing Point — Kant's Principle Isn't Anti-Market</h5>
 <p>Kant's principle doesn't condemn markets, employment, or technology as such — a fair wage for genuine labour, freely and knowingly consented to, treats the worker as an end (their autonomous choice to work is respected) even while their labour is also, legitimately, "used" for the employer's ends. <strong>The violation isn't in using someone's capacities at all — it's in doing so while disregarding their consent, understanding, autonomy, or wellbeing entirely.</strong></p>
-<div class="pyq-box" id="ehi-q31"><p class="pyq-q"><strong>PYQ. "Human beings should always be treated as 'ends' in themselves and never as merely 'means'." Explain the meaning and significance of this statement, giving its implications in the modern techno-economic society. (2014, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi3-q2"><p class="pyq-q"><strong>PYQ. "Human beings should always be treated as 'ends' in themselves and never as merely 'means'." Explain the meaning and significance of this statement, giving its implications in the modern techno-economic society. (2014, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Kant's Second Formulation states: <em>"Act... never merely as a means to an end, but always at the same time as an end."</em> The crucial word is "merely" — using someone's labour or expertise is unavoidable; treating them exclusively as an instrument, disregarding their consent and dignity, is forbidden.</p><p><strong>Meaning and Philosophical Basis</strong><br/>
 Human beings possess rational agency — the capacity to set their own ends and choose autonomously. This is what makes a person an "end in themselves," unlike a tool with no self-determination.</p><p><strong>Significance</strong><br/>
 Genuine relationships — friendship, employment, governance — remain ethical when they engage a person's consent and agency, even while legitimately drawing on their capacities.</p><h5>Implications for Modern Techno-Economic Society</h5><ul>
@@ -2863,7 +2886,7 @@ Kant's 18th-century principle remains startlingly relevant — genuine ethics in
 <li><p><strong>Transparency about one's own limitations</strong> — Baier's framework suggests that trust is strengthened, not weakened, by honest disclosure of what one <em>cannot</em> promise, since false reassurance eventually produces the exact betrayal that erodes trust most severely.</p></li>
 <li><p><strong>Extending trust first, calibrated wisely</strong> — recall Trivers' reciprocal altruism: trust-building often requires someone to take the first, vulnerable step; a person who waits for others to prove trustworthiness before extending any trust themselves contributes to, rather than resolves, a societal trust deficit.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q32"><p class="pyq-q"><strong>Q. The current society is plagued with widespread trust-deficit. What are the consequences of this situation for personal well-being and for societal well-being? What can you do at the personal level to make yourself trustworthy? (2014, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi3-q3"><p class="pyq-q"><strong>Q. The current society is plagued with widespread trust-deficit. What are the consequences of this situation for personal well-being and for societal well-being? What can you do at the personal level to make yourself trustworthy? (2014, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Philosopher Annette Baier defined trust as "accepted vulnerability to another's possible but not expected ill will" — a conscious acceptance of risk based on genuine faith in another's good intent. This is precisely why its erosion is so costly, both personally and socially.</p><h5>Consequences for Personal Well-being</h5><ul>
 <li><p>Seligman's PERMA framework identifies "Relationships" as a core pillar of flourishing — relationship requires accepted vulnerability, which chronic distrust makes structurally impossible</p></li>
 <li><p>Documented correlation between distrust and loneliness, anxiety, reduced life satisfaction</p></li>
@@ -2923,7 +2946,7 @@ Trust is society's invisible infrastructure; rebuilding it begins with the perso
 <li><p><strong>Moral Motivation:</strong> the PA's personal request created pressure to resolve this informally and quickly, rather than through the (possibly slower, more bureaucratic) formal channel — this is exactly where institutional convenience tempts a shortcut around proper process.</p></li>
 <li><p><strong>Moral Character/Implementation:</strong> genuine integrity here would mean the DM redirecting the PA (and the teacher) toward the correct formal channel, even at the cost of seeming less immediately "helpful" — a harder, less socially comfortable path than simply granting the favour.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q33"><p class="pyq-q"><strong>PYQ. On the request of his Personal Assistant (PA), the District Magistrate (DM) stops the transfer of a schoolteacher who takes private tuition for his daughter diagnosed with learning disability. In this context, discuss the aspects of empathy versus compliance with rules. (2026, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi3-q4"><p class="pyq-q"><strong>PYQ. On the request of his Personal Assistant (PA), the District Magistrate (DM) stops the transfer of a schoolteacher who takes private tuition for his daughter diagnosed with learning disability. In this context, discuss the aspects of empathy versus compliance with rules. (2026, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 This is not dramatized corruption — the motive is genuinely compassionate. Yet philosopher Michael Walzer's "spheres of justice" framework shows the real problem: a private channel (the PA's personal request) is being used to secure an outcome that should be governed by the transfer policy's own public criteria.</p><h5>Why the Channel, Not the Empathy, Is the Problem</h5><ul>
 <li><p>The DM's authority over transfers belongs to the office, exercised for the entire teaching cadre — not a personal favour to dispense via informal access</p></li>
 <li><p>Other teachers with equally genuine hardship, but no PA connection, have no equivalent channel — a precedent and fairness problem</p></li>
@@ -2995,7 +3018,7 @@ A well-designed system should never force a choice between compassion and compli
 <li><p><strong>But moderate the demandingness</strong>: the duty is better framed as requiring <strong>significant, sustained, but not unlimited</strong> sacrifice.</p></li>
 <li><p><strong>Preserve some role for special obligations</strong>: proximity and relationship can justify <em>additional</em> obligations (to family, community) without licensing indifference to distant strangers' suffering — the two aren't mutually exclusive.</p></li>
 </ul>
-<div class="pyq-box" id="ehi-q34"><p class="pyq-q"><strong>PYQ. Some moral philosophers argue that spending some of your resources—without significantly affecting your financial stability—to help other people who badly suffer is our moral duty and not merely a matter of charity. Justify this claim by explaining the distinction between duty and charity. (2026, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi3-q5"><p class="pyq-q"><strong>PYQ. Some moral philosophers argue that spending some of your resources—without significantly affecting your financial stability—to help other people who badly suffer is our moral duty and not merely a matter of charity. Justify this claim by explaining the distinction between duty and charity. (2026, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Philosopher Peter Singer asked: if you saw a child drowning in a shallow pond, would muddying your clothes excuse you from saving it? Nearly everyone says no — it's a duty, not a discretionary kindness. Singer argued distance changes nothing about this logic.</p><h5>Duty vs Charity</h5><ul>
 <li><p><strong>Duty:</strong> obligation whose fulfillment is morally required — omission is a genuine wrong</p></li>
 <li><p><strong>Charity:</strong> praiseworthy but optional — "supererogatory," beyond the call of duty</p></li>
@@ -3059,7 +3082,7 @@ Helping distant sufferers, within sustainable limits, is less an act of generosi
 <p>Recall the Bhagavad Gita's concept of <em><strong>Nishkama Karma</strong></em> (selfless action, performing duty without attachment to personal reward) — Trusteeship is, in a meaningful sense, <strong>Nishkama Karma applied specifically to the stewardship of resources and power.</strong> Both concepts share the identical underlying structure: <strong>you perform your role/duty faithfully, but you release your personal, self-interested claim over what that role/duty puts into your hands</strong> — whether that's the fruits of your labour (Gita) or the wealth/authority entrusted to you (Trusteeship). It shows Gandhi's modern economic philosophy is itself directly rooted in a much older Indian philosophical tradition — not an isolated 20th-century invention.</p>
 <h5>A Necessary Critical Balance</h5>
 <p>Trusteeship, in its <em>original</em> form, was a <strong>voluntary, moral appeal</strong> to wealthy individuals — it had no enforcement mechanism, and critics (including many contemporaries of Gandhi) pointed out that relying purely on wealthy individuals' voluntary moral conversion, with no structural/legal compulsion, is a fragile foundation for genuine economic justice. <strong>The genuinely valuable insight for a civil servant, however, is different</strong>: unlike Gandhi's industrialists, a civil servant's Trusteeship <em>is</em> backed by genuine structural enforcement — codes of conduct, the Central Civil Services Conduct Rules, vigilance mechanisms, and the <em>nemo judex in causa sua</em> principle — meaning Trusteeship, when applied to public office, gains exactly the institutional teeth it lacked in its original, purely voluntary economic application.</p>
-<div class="pyq-box" id="ehi-q35"><p class="pyq-q"><strong>PYQ. In what ways can an Indian Administrative Officer apply Gandhi's notion of 'trusteeship' to ensure fairness in governance? (2026, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
+<div class="pyq-box" id="ehi3-q6"><p class="pyq-q"><strong>PYQ. In what ways can an Indian Administrative Officer apply Gandhi's notion of 'trusteeship' to ensure fairness in governance? (2026, 150 words/10 marks)</strong></p><div class="pyq-a"><p><strong>Introduction</strong><br/>
 Gandhi wrote: "When an individual has more than his proportionate portion, he becomes a trustee of that portion for God's people." Developed for wealthy industrialists, this principle maps precisely onto Weber's concept of legal-rational authority — an officer's power, like a trustee's wealth, is held but not owned.</p><h5>The Structural Parallel</h5><ul>
 <li><p>Officer retains discretion (like the trustee retains legal title) but not moral entitlement to misuse it</p></li>
 <li><p>Authority is exercised on behalf of citizens equally entitled to it, not for personal or family advantage</p></li>
@@ -3098,7 +3121,7 @@ Unlike Gandhi's original voluntary appeal to industrialists, an officer's truste
 <template id="paper-2013">
 
 <h3 id="y2013-sec1">SECTION A</h3>
-<p><strong>Q1.</strong> What do you understand by ‘Values’ and ‘Ethics’? In what way is it important to be ethical along with being professionally competent? (150 words) [10] <a class="ma" href="#/notes/human-interface/ehi-q1">Model answer</a></p>
+<p><strong>Q1.</strong> What do you understand by ‘Values’ and ‘Ethics’? In what way is it important to be ethical along with being professionally competent? (150 words) [10] <a class="ma" href="#/notes/human-interface/essence/ehi1-q1">Model answer</a></p>
 <p><strong>Q2.</strong></p>
 <p>(a) What do you understand by the following terms in the context of public service?</p>
 <p>i. Integrity<br/>
@@ -3108,7 +3131,7 @@ iv. Commitment<br/>
 v. Courage of Conviction</p>
 <p>(250 words) [3×5 = 15]</p>
 <p>(b) Indicate two more attributes which you consider important for public service. Justify your answer. (100 words) [10]</p>
-<p><strong>Q3.</strong> Some people feel that values keep changing with time and situation, while others strongly believe that there are certain universal and eternal human values. Give your perception in this regard with due justification. (150 words) [10] <a class="ma" href="#/notes/human-interface/ehi-q4">Model answer</a></p>
+<p><strong>Q3.</strong> Some people feel that values keep changing with time and situation, while others strongly believe that there are certain universal and eternal human values. Give your perception in this regard with due justification. (150 words) [10] <a class="ma" href="#/notes/human-interface/essence/ehi1-q4">Model answer</a></p>
 <p><strong>Q4.</strong> What is ‘emotional intelligence’ and how can it be developed in people? How does it help an individual in taking ethical decisions? (150 words) [10]</p>
 <p><strong>Q5.</strong></p>
 <p>(a) What do you understand by the term ‘voice of conscience’? How do you prepare yourself to heed to the voice of conscience?</p>
@@ -3120,7 +3143,7 @@ v. Courage of Conviction</p>
 <p>(c) “I count him braver who overcomes his desires than him who overcomes his enemies”. – Aristotle.</p>
 <p>(150 words) [10]</p>
 <p><strong>Q7.</strong> “The good of an individual is contained in the good of all”. What do you understand by this statement? How can this principle be implemented in public life? (150 words) [10]</p>
-<p><strong>Q8.</strong> It is often said that ‘politics’ and ‘ethics do not go together. What is your opinion in this regard? Justify your answer with illustration. (150 words) [10] <a class="ma" href="#/notes/human-interface/ehi-q30">Model answer</a></p>
+<p><strong>Q8.</strong> It is often said that ‘politics’ and ‘ethics do not go together. What is your opinion in this regard? Justify your answer with illustration. (150 words) [10] <a class="ma" href="#/notes/human-interface/private-public/ehi3-q1">Model answer</a></p>
 <h3 id="y2013-sec2">SECTION B</h3>
 <p>In the following questions, carefully study the cases presented and then answer the questions that follow:</p>
 <p><strong>Q9.</strong> A Public Information Officer has received an application under RTI Act. Having gathered the information, the PIO discovers that the information pertains to some of the decisions taken by him, which were found to be not altogether right. There were other employees also who were party to these decisions. Disclosure of the information is likely to lead to disciplinary action with possibility of punishment against him as well as some of his colleagues. Non-disclosure or part disclosure or camouflaged disclosure of information will result into lesser punishment or no punishment.</p>
@@ -3160,15 +3183,15 @@ v. Courage of Conviction</p>
 </template>
 <template id="paper-2014">
 <h3 id="y2014-sec1">SECTION A</h3>
-<p><strong>Q1(a)</strong> All human beings aspire for happiness. Do you agree? What does happiness mean to you? Explain with answers. (150 Words) (10 M) <a class="ma" href="#/notes/human-interface/ehi-q8">Model answer</a></p>
-<p><strong>Q1(b)</strong> What does ethics seek to promote in human life? Why is it all the more important in Public Administration? (150 Words) (10 M) <a class="ma" href="#/notes/human-interface/ehi-q10">Model answer</a></p>
+<p><strong>Q1(a)</strong> All human beings aspire for happiness. Do you agree? What does happiness mean to you? Explain with answers. (150 Words) (10 M) <a class="ma" href="#/notes/human-interface/essence/ehi1-q8">Model answer</a></p>
+<p><strong>Q1(b)</strong> What does ethics seek to promote in human life? Why is it all the more important in Public Administration? (150 Words) (10 M) <a class="ma" href="#/notes/human-interface/essence/ehi1-q10">Model answer</a></p>
 <p><strong>Q2(a)</strong> In the context of defence services, ‘patriotism’ demands readiness to even lay down one’s life in protecting the nation. According to you, what does patriotism imply in everyday civil life? Explain with illustrations and justify your answer. (150 Words) (10 M)</p>
 <p><strong>Q2(b)</strong> What do you understand by ‘probity’ in public life? What are the difficulties in practicing it in the present times? How can these difficulties be overcome? (150 Words) (10 M)</p>
 <p><strong>Q3(a)</strong> “Integrity without knowledge is weak and useless, but knowledge without integrity is dangerous and dreadful.” What do you understand by this statement? Explain your stand with illustrations from modern day context. (150 Words) (10 M)</p>
-<p><strong>Q3(b)</strong> “Human beings should always be treated as ‘ends’ in themselves and never as ‘means’.” Explain the meaning and significance of this statement, giving it’s implications in the modern techno-economic society. (150 Words) (10 M) <a class="ma" href="#/notes/human-interface/ehi-q31">Model answer</a></p>
+<p><strong>Q3(b)</strong> “Human beings should always be treated as ‘ends’ in themselves and never as ‘means’.” Explain the meaning and significance of this statement, giving it’s implications in the modern techno-economic society. (150 Words) (10 M) <a class="ma" href="#/notes/human-interface/private-public/ehi3-q2">Model answer</a></p>
 <p><strong>Q4(a)</strong> Which eminent personality has inspired you the most in the context of ethical conduct in life? Give the Gist of his/her teachings. Giving specific examples describe how you have been able to apply these teachings for your own ethical development. (150 Words) (10 M)</p>
 <p><strong>Q4(b)</strong> There is a heavy ethical responsibility on the public servants because they occupy positions of power, handle huge amounts of public funds, and their decisions have wide ranging impact on society and environment. What steps have you taken to improve your ethical competence to handle such responsibility? (150 Words) (10 M)</p>
-<p><strong>Q5(a)</strong> The current society is plagued with widespread trust-deficit. What are the consequences of this situation for personal well-being and for societal well-being? What can you do at the personal level to make yourself trustworthy? (150 Words) (10 M) <a class="ma" href="#/notes/human-interface/ehi-q32">Model answer</a></p>
+<p><strong>Q5(a)</strong> The current society is plagued with widespread trust-deficit. What are the consequences of this situation for personal well-being and for societal well-being? What can you do at the personal level to make yourself trustworthy? (150 Words) (10 M) <a class="ma" href="#/notes/human-interface/private-public/ehi3-q3">Model answer</a></p>
 <p><strong>Q5(b)</strong> It is often said that poverty leads to corruption. However there is no dearth of instances where affluent and powerful people indulge in corruption in a big way. What are the basic causes of corruption among people? Support your answer with examples. (150 Words) (10 M)</p>
 <p><strong>Q6)</strong> What factors affect the formation of a person’s attitude towards social problems? In our society, contrasting attitudes are prevalent about many social problems. What contrasting attitudes do you notice about the caste system in our society? How do you explain the existence of these contrasting attitudes? (150 Words) (10 M)</p>
 <p><strong>Q7)</strong> What does ‘accountability’ mean in the context of public service ? What measures can be adopted to ensure individual and collective accountability of public servants? (150 Words) (10 M)</p>
@@ -3203,12 +3226,12 @@ v. Courage of Conviction</p>
 </template>
 <template id="paper-2015">
 <h3 id="y2015-sec1">SECTION A</h3>
-<p><strong>1. (a)</strong> What is meant by ‘environmental ethics’? Why is it important to study? Discuss any one environmental issue from the viewpoint of environmental ethics. (150 words) <a class="ma" href="#/notes/human-interface/ehi-q23">Model answer</a></p>
+<p><strong>1. (a)</strong> What is meant by ‘environmental ethics’? Why is it important to study? Discuss any one environmental issue from the viewpoint of environmental ethics. (150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q10">Model answer</a></p>
 <p><strong>(b)</strong> Differentiate between the following (200 words):</p>
-<p>(i) Law and Ethics <a class="ma" href="#/notes/human-interface/ehi-q14">Model answer</a><br/>
+<p>(i) Law and Ethics <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q1">Model answer</a><br/>
 (ii) Ethical management and Management of ethics<br/>
-(iii) Discrimination and Preferential treatment <a class="ma" href="#/notes/human-interface/ehi-q18">Model answer</a><br/>
-(iv) Personal ethics and Professional ethics <a class="ma" href="#/notes/human-interface/ehi-q3">Model answer</a></p>
+(iii) Discrimination and Preferential treatment <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q5">Model answer</a><br/>
+(iv) Personal ethics and Professional ethics <a class="ma" href="#/notes/human-interface/essence/ehi1-q3">Model answer</a></p>
 <p><strong>2.</strong> Given are two quotations of moral thinkers/philosophers. For each of these, bring out what it means to you in the present context:</p>
 <p><strong>(a)</strong> “The weak can never forgive; forgiveness is the attribute of the strong.” (150 words)</p>
 <p><strong>(b)</strong> “We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.” (150 words)</p>
@@ -3265,7 +3288,7 @@ v. Courage of Conviction</p>
 </template>
 <template id="paper-2016">
 <h3 id="y2016-sec1">SECTION A</h3>
-<p><strong>1(a).</strong> Explain how ethics contributes to social and human well-being. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q9">Model answer</a></p>
+<p><strong>1(a).</strong> Explain how ethics contributes to social and human well-being. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/essence/ehi1-q9">Model answer</a></p>
 <p><strong>1(b).</strong> Why should impartiality and non-partisanship be considered as foundational values in public services, especially in the present day socio-political context? Illustrate your answer with examples. (Answer in 150 words)</p>
 <p><strong>2(a).</strong> What do you understand by the terms ‘governance’, ‘good governance’ and ‘ethical governance’? (Answer in 150 words)</p>
 <p><strong>2(b).</strong> Discuss Mahatma Gandhi’s concept of seven sins. (Answer in 150 words)</p>
@@ -3273,7 +3296,7 @@ v. Courage of Conviction</p>
 <p><strong>3(b).</strong> Discuss the Public Services Code as recommended by the 2nd Administrative Reforms Commission. (Answer in 150 words)</p>
 <p><strong>4(a).</strong> “Corruption causes misuse of government treasury, administrative inefficiency and obstruction in the path of national development.” Discuss Kautilya’s views. (Answer in 150 words)</p>
 <p><strong>4(b).</strong> How could social influence and persuasion contribute to the success of Swachh Bharat Abhiyan? (Answer in 150 words)</p>
-<p><strong>5.</strong> Law and ethics are considered to be the two tools for controlling human conduct so as to make it conducive to civilized social existence. (a) Discuss how they achieve this objective. (b) Giving examples, show how the two differ in their approaches. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q15">Model answer</a></p>
+<p><strong>5.</strong> Law and ethics are considered to be the two tools for controlling human conduct so as to make it conducive to civilized social existence. (a) Discuss how they achieve this objective. (b) Giving examples, show how the two differ in their approaches. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q2">Model answer</a></p>
 <p><strong>6.</strong> Our attitudes towards life, work, other people and society are generally shaped unconsciously by the family and the social surroundings in which we grow up. Some of these unconsciously acquired attitudes and values are often undesirable in the citizens of a modern democratic and egalitarian society.</p>
 <p>(a) Discuss such undesirable values prevalent in today’s educated Indians.<br/>
 (b) How can such undesirable attitudes be changed and socio-ethical values considered necessary in public services be cultivated in the aspiring and serving civil servants?<br/>
@@ -3327,10 +3350,10 @@ v. Courage of Conviction</p>
 <p><strong>(b)</strong> “If a country is to be corruption free and become a nation of beautiful minds, I strongly feel there are three key societal members who can make a difference. they are father, the mother and the teacher.” – A. P. J. Abdul Kalam. Analyse. (150 Words, 10)</p>
 <p><strong>Q6. (a)</strong> How will you apply emotional intelligence in administrative practices? (150 Words, 10)</p>
 <p><strong>(b)</strong> Strength, peace and security are considered to be the pillars of international relations. Elucidate. (150 Words, 10)</p>
-<p><strong>Q7. (a)</strong> The crisis of ethical values in modern times is traced to a narrow perception of the good life. Discuss. (150 Words, 10) <a class="ma" href="#/notes/human-interface/ehi-q13">Model answer</a></p>
+<p><strong>Q7. (a)</strong> The crisis of ethical values in modern times is traced to a narrow perception of the good life. Discuss. (150 Words, 10) <a class="ma" href="#/notes/human-interface/essence/ehi1-q13">Model answer</a></p>
 <p><strong>(b)</strong> Increased national wealth did not result in equitable distribution of its benefits. It has created only some “enclaves of modernity and prosperity for a small minority at the cost of the majority.” Justify. (150 Words, 10)</p>
 <p><strong>Q8. (a)</strong> Discipline generally implies following the order and subordination. However, it may be counter-productive for the organisation. Discuss. (150 Words, 10)</p>
-<p><strong>(b)</strong> Without commonly shared and widely entrenched moral values and obligations, neither the law, nor democratic government, nor even the market economy will function properly. <a class="ma" href="#/notes/human-interface/ehi-q7">Model answer</a></p>
+<p><strong>(b)</strong> Without commonly shared and widely entrenched moral values and obligations, neither the law, nor democratic government, nor even the market economy will function properly. <a class="ma" href="#/notes/human-interface/essence/ehi1-q7">Model answer</a></p>
 <p>What do you understand by this statement? Explain with illustration in the contemporary times. (150 Words, 10)</p>
 <h3 id="y2017-sec2">SECTION B</h3>
 <p><strong>Q9.</strong> You are an honest and responsible civil servant. You often observe the following:</p>
@@ -3363,7 +3386,7 @@ Discuss the merits and demerits of each of the recommendations. (250 Words, 20)<
 <p><strong>(b)</strong> “In looking for people to hire, you look for three qualities: integrity, intelligence, and energy. And if they do not have the first, the other two will kill you.” – Warren Buffett<br/>
 What do you understand by this statement in the present-day scenario? Explain. (150 words)</p>
 <p><strong>4-(a)</strong> “In doing a good thing, everything is permitted which is not prohibited expressly or by clear implication”. Examine the statement with suitable examples in the context of a public servant discharging his/her duties. (150 words)</p>
-<p><strong>(b)</strong> With regard to the morality of actions, one view is that means is of paramount importance and the other view is that the ends justify the means. Which view do you think is more appropriate? Justify your answer. (150 words) <a class="ma" href="#/notes/human-interface/ehi-q5">Model answer</a></p>
+<p><strong>(b)</strong> With regard to the morality of actions, one view is that means is of paramount importance and the other view is that the ends justify the means. Which view do you think is more appropriate? Justify your answer. (150 words) <a class="ma" href="#/notes/human-interface/essence/ehi1-q5">Model answer</a></p>
 <p><strong>5-(a)</strong> Suppose the Government of India is thinking of constructing a dam in a mountain valley bonded by forests and inhabited by ethnic communities. What rational policy should it resort to in dealing with unforeseen contingencies (150 words)</p>
 <p><strong>(b)</strong> Explain the process of resolving ethical dilemmas in Public Administration. (150 words)</p>
 <p><strong>6.</strong> What do each of the following quotations mean to you in the present context?</p>
@@ -3452,7 +3475,7 @@ What do you understand by this statement in the present-day scenario? Explain. (
 </template>
 <template id="paper-2020">
 <h3 id="y2020-sec1">SECTION A</h3>
-<p><strong>1. (a)</strong> Discuss the role of ethics and values in enhancing the following three major components of Comprehensive National Power (CNP) viz. human capital, soft power (culture and policies) and social harmony. (150 words) <a class="ma" href="#/notes/human-interface/ehi-q12">Model answer</a></p>
+<p><strong>1. (a)</strong> Discuss the role of ethics and values in enhancing the following three major components of Comprehensive National Power (CNP) viz. human capital, soft power (culture and policies) and social harmony. (150 words) <a class="ma" href="#/notes/human-interface/essence/ehi1-q12">Model answer</a></p>
 <p><strong>1. (b)</strong> “Education is not an injunction, it is an effective and pervasive tool for all round development of an individual and social transformation”. Examine the New Education Policy, 2020 (NEP, 2020) in light of the above statement. (150 words)</p>
 <p><strong>2. (a)</strong> “Hatred is destructive of a person’s wisdom and conscience that can poison a nation’s spirit.’ Do you agree with this view? Justify your answer. (150 words)</p>
 <p><strong>2. (b)</strong> What are the main components of emotional intelligence (EI)? Can they be learned? Discuss. (150 words)</p>
@@ -3514,7 +3537,7 @@ What do you understand by this statement in the present-day scenario? Explain. (
 <h3 id="y2021-sec1">SECTION A</h3>
 <p><strong>1. (a)</strong> Identify five ethical traits on which one can plot the performance of a civil servant. Justify their inclusion in the matrix. (Answer in 150 words)</p>
 <p><strong>(b)</strong> Identify ten essential values that are needed to be an effective public servant. Describe the ways and means to prevent non-ethical behaviour in the public servants. (Answer in 150 words)</p>
-<p><strong>2. (a)</strong> Impact of digital technology as reliable source of input for rational decision making is debatable issue. Critically evaluate with suitable example. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q27">Model answer</a></p>
+<p><strong>2. (a)</strong> Impact of digital technology as reliable source of input for rational decision making is debatable issue. Critically evaluate with suitable example. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q14">Model answer</a></p>
 <p><strong>(b)</strong> Besides domain knowledge, a public official needs innovativeness and creativity of a high order as well, while resolving ethical dilemmas. Discuss with suitable example. (Answer in 150 words)</p>
 <p><strong>3.</strong> What does each of the following quotations mean to you?</p>
 <p><strong>(a)</strong> “Every work has got to pass through hundreds of difficulties before succeeding. Those that persevere will see the light, sooner or later.” — Swami Vivekananda (Answer in 150 words)</p>
@@ -3589,10 +3612,10 @@ What do you understand by this statement in the present-day scenario? Explain. (
 <p><strong>1. (a)</strong> Wisdom lies in knowing what to reckon with and what to overlook. An officer being engrossed with the periphery, ignoring the core issues before him, is not rare in the bureaucracy. Do you agree that such preoccupation of an administrator leads to travesty of justice to the cause of effective service delivery and good governance? Critically evaluate. (Answer in 150 words)</p>
 <p><strong>(b)</strong> Apart from intellectual competency and moral qualities, empathy and compassion are some of the other vital attributes that facilitate the civil servants to be more competent in tackling the crucial issues or taking critical decisions. Explain with suitable illustrations. (Answer in 150 words)</p>
 <p><strong>2. (a)</strong> The Rules and Regulations provided to all the civil servants are same, yet there is differnce in the performance. Positive minded officers are able to interpret the Rules and Regulations in favour of the case and achieve success, whereas negative minded officers are unable to achieve goals by interpreting the same Rules and Regulations against the case. Discuss with illustrations. (Answer in 150 words)</p>
-<p><strong>(b)</strong> It is believed that adherence to ethics in human actions would ensure in smooth functioning of an organization/system. If so, what does ethics seek to promote in human life? How do ethical values assist in the resolution of conflicts faced by him in his day-to-day functioning? (Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q11">Model answer</a></p>
+<p><strong>(b)</strong> It is believed that adherence to ethics in human actions would ensure in smooth functioning of an organization/system. If so, what does ethics seek to promote in human life? How do ethical values assist in the resolution of conflicts faced by him in his day-to-day functioning? (Answer in 150 words) <a class="ma" href="#/notes/human-interface/essence/ehi1-q11">Model answer</a></p>
 <p><strong>3.</strong> What does each of the following quotations mean to you? (Answer in 150 words)</p>
 <p><strong>(a)</strong> “Ethics is knowing the difference between what you have the right to do and what is right to do.” — Potter Stewart<br/>
-(Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q16">Model answer</a></p>
+(Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q3">Model answer</a></p>
 <p><strong>(b)</strong> “If a country is to be corruption free and become a nation of beautiful minds, I strongly feel that there are three key societal members who can make a difference. They are father, mother and teacher.” — A.P.J. Abdul Kalam<br/>
 (Answer in 150 words)</p>
 <p><strong>(c)</strong> “Judge your success by what you had to give up in order to get it.” — Dalai Lama<br/>
@@ -3663,7 +3686,7 @@ What do you understand by this statement in the present-day scenario? Explain. (
 <p><strong>(b)</strong> “To awaken the people, it is the women who must be awakened. Once she is on the move, the family moves, the village moves, the nation moves.” –Jawharlal Nahru (Answer in 150 words)</p>
 <p><strong>(c)</strong> “Do not hate anybody, because that hatred that comes out from you must, in the long run, come back to you. If you love, that love will come back to you, completing the circle.” Swami Vivekananda (Answer in 150 words)</p>
 <p><strong>4. (a)</strong> “What really matters for success, character, happiness and lifelong achievements is a definite set of emotional skills – your EQ – not just purely cognitive abilities that are measured by conventional IQ tests.” Do you agree with this view? Give reasons in support of your answer. (Answer in 150 words)</p>
-<p><strong>(b)</strong> Differentiate “moral intuition” from “moral reasoning” with suitable examples. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q21">Model answer</a></p>
+<p><strong>(b)</strong> Differentiate “moral intuition” from “moral reasoning” with suitable examples. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q8">Model answer</a></p>
 <p><strong>5. (a)</strong> Is conscience a more reliable guide when compared to laws, rules and regulations in the context of ethical decision-making? Discuss. (Answer in 150 words)</p>
 <p><strong>(b)</strong> “Probity is essential for an effective system of government and socio-economic development.” Discuss. (Answer in 150 words)</p>
 <p><strong>6. (a)</strong> What were the major teachings of Guru Nanak? Explain their relevance in the contemporary world. (Answer in 150 words)</p>
@@ -3705,13 +3728,13 @@ What do you understand by this statement in the present-day scenario? Explain. (
 <template id="paper-2024">
 <h3 id="y2024-sec1">SECTION ‘A’</h3>
 <p><strong>1.(a)</strong> The application of Artificial Intelligence as a dependeble source of input for administrative rational decision-making is a debatable issue. Critically examine the statement from the ethical point of view.<br/>
-(Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q28">Model answer</a></p>
+(Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q15">Model answer</a></p>
 <p><strong>1.(b)</strong> “Ethics encompasses several key dimensions that are crucial in guiding individuals and organizations towards morally responsible behaviour.” Explain the key dimensions of ethics that influence human actions. Discuss how these dimensions shape ethical decision&amp;making in the professional context.<br/>
-(Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q22">Model answer</a></p>
+(Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q9">Model answer</a></p>
 <p><strong>2.(a)</strong> “It is not enough to talk about peace, one must believe in it; and it is not enough to believe in it is one must act upon it.” In the present context, the major weapon industries of the developed nations are adversely influencing continuation of number of wars for their own self-interest, all around the world. What are the ethical considerations of the powerful nations in today's international arena to stop continuation of ongoing conflicts.<br/>
 (Answer in 150 words)</p>
 <p><strong>2.(b)</strong> Global warming and climate change are the outcomes of human greed in the name of development] indicating the direction in which extinction of organisms including human beings is heading towards loss of life on Earth. How do you put an end to this to protect life and bring equilibrium between the society and the environment.<br/>
-(Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q24">Model answer</a></p>
+(Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q11">Model answer</a></p>
 <p><strong>3.</strong> Given below are three quotations of great thinkers. What do each of these quotations convey to you in the present context.</p>
 <p><strong>(a)</strong> “Learn everything that is good from others, but bring it in, and in your own way absorb it, do not become others.” -Swami Vivekananda<br/>
 (Answer in 150 words)</p>
@@ -3720,13 +3743,13 @@ What do you understand by this statement in the present-day scenario? Explain. (
 <p><strong>(c)</strong> “In law, a man is guilty when he violates the rights of others. In ethics, he is guilty if he only thinks of doing so.” -Immanuel Kant<br/>
 (Answer in 150 words)</p>
 <p><strong>4.(a)</strong> “The concept of Just and Unjust is contextual. What was just a year back, may turn out to be unjust in today's context. Changing context should be constantly under scrutiny to prevent miscarriage of justice.” Examine the above statement with suitable examples.<br/>
-(Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q19">Model answer</a></p>
+(Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q6">Model answer</a></p>
 <p><strong>4.(b)</strong> “Mindless addiction to Form, ignoring the Substance of the matter, results in rendering of injustice. A perceptive civil servant is one who ignores such literalness and carries out true intent.” Examine the above statement with suitable illustrations.<br/>
 (Answer in 150 words)</p>
 <p><strong>5.(a)</strong> The 'Code of Conduct' and 'Code of Ethics' are the sources of guidance in public administration-.There is code of conduct already in operation. whereas code of ethics is not yet put in place. Suggest a suitable model for code of ethics to maintain integrity. probity and transparency in governance.<br/>
 (Answer in 150 words)</p>
 <p><strong>5.(b)</strong> The soul of the new law, Bharatiya Nyaya Sanhita (BNS) is Justice, Equality and Impartiality based on Indian culture and ethos. Discuss this in the light of major shift from a doctrine of punishment to justice in the present judicial system.<br/>
-(Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q20">Model answer</a></p>
+(Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q7">Model answer</a></p>
 <p><strong>6.(a)</strong> “In Indian culture and value system, an equal opportunity has been provided irrespective of gender identity. The number of women in public service has been steadily increasing over the years.” Examine the gender-specific challenges faced by female public servants and suggest suitable measures to increase their efficiency in discharging their duties and maintaining high standards of probity.<br/>
 (Answer in 150 words)</p>
 <p><strong>6.(b)</strong> Mission Karmayogi is aiming for maintaining a very high standard of conduct and behaviour to ensure efficiency for serving citizens and in turn developing oneself. How will this scheme empower the civil servants in enhancing productive efficiency and delivering the services at the grassroots level.<br/>
@@ -3772,10 +3795,10 @@ What do you understand by this statement in the present-day scenario? Explain. (
 </template>
 <template id="paper-2025">
 <h3 id="y2025-sec1">SECTION ‘A’</h3>
-<p><strong>1-(a)</strong> In the present digital age, social media has revolutionised our way of communication and interaction. However, it has raised several ethical issues and challenges. Describe the key ethical dilemmas in this regard. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q29">Model answer</a></p>
+<p><strong>1-(a)</strong> In the present digital age, social media has revolutionised our way of communication and interaction. However, it has raised several ethical issues and challenges. Describe the key ethical dilemmas in this regard. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q16">Model answer</a></p>
 <p><strong>1-(b)</strong> “Constitutional morality is not a natural sentiment but a product of civil education and adherance of the rule of law.” Examine the significance of constitutional morality for public servant highlighting the role in promoting good governance and ensuring accountability in public administration. (Answer in 150 words)</p>
 <p><strong>2-(a)</strong> Carl von Clausewitz once said, “War is a diplomacy by other means.” Critically analyse the above statement in the present context of contemporary geo-political conflict. (Answer in 150 words)</p>
-<p><strong>2-(b)</strong> Keeping the national security in mind, examine the ethical dilemmas related to controversies over environmental clearance of development projects in ecologically sensitive border areas in the country. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/ehi-q26">Model answer</a></p>
+<p><strong>2-(b)</strong> Keeping the national security in mind, examine the ethical dilemmas related to controversies over environmental clearance of development projects in ecologically sensitive border areas in the country. (Answer in 150 words) <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q13">Model answer</a></p>
 <p><strong>3</strong> Given below are three quotations of great thinkers. What do each of these quotations convey to you in the present context?</p>
 <p><strong>3-(a)</strong> “Those who in trouble untroubled are, Will trouble trouble itself.” — Thiruvalluvar<br/>
 (Answer in 150 words)</p>
@@ -3845,19 +3868,19 @@ What do you understand by this statement in the present-day scenario? Explain. (
 <template id="paper-2026">
 <h3 id="y2026-sec1">SECTION-A</h3>
 <ul>
-<li><p><strong>Q1. (a)</strong> Owing to paucity of time, a university professor generates a Ph.D. evaluation report using Artificial Intelligence and submits it with some modifications. Discuss this from the perspective of accountability and integrity. <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/ehi-q2">Model answer</a></p></li>
-<li><p><strong>Q1. (b)</strong> A business house is working on a project that could displace a forest community from their habitat. As the administrative officer of that district, what ethical challenges are you likely to face? <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/ehi-q25">Model answer</a></p></li>
+<li><p><strong>Q1. (a)</strong> Owing to paucity of time, a university professor generates a Ph.D. evaluation report using Artificial Intelligence and submits it with some modifications. Discuss this from the perspective of accountability and integrity. <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/essence/ehi1-q2">Model answer</a></p></li>
+<li><p><strong>Q1. (b)</strong> A business house is working on a project that could displace a forest community from their habitat. As the administrative officer of that district, what ethical challenges are you likely to face? <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q12">Model answer</a></p></li>
 <li><p><strong>Q2. (a)</strong> An endangered tribe has developed a severe skeletal deformity. A university research has identified a mineral supplement as a possible remedy, though clinical trials are yet to be conducted. Should the District Magistrate (DM) use this research on the tribe? Discuss from the perspective of medical and administrative ethics. <em>(150 words / 10 marks)</em></p></li>
 <li><p><strong>Q2. (b)</strong> Discuss how national security can be balanced with concerns of human rights. <em>(150 words / 10 marks)</em></p></li>
-<li><p><strong>Q3. (a)</strong> Dr. B. R. Ambedkar had cautioned that employing civil disobedience within a constitutional democracy equates to endorsing 'anarchy'. How should modern democracies navigate the ethical dilemmas posed by civil disobedience movements that aim to promote social justice against policies that may raise genuine concerns? <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/ehi-q17">Model answer</a></p></li>
-<li><p><strong>Q3. (b)</strong> In what ways can an Indian Administrative Officer apply Gandhi's notion of 'trusteeship' to ensure fairness in governance? <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/ehi-q35">Model answer</a></p></li>
-<li><p><strong>Q3. (c)</strong> Shakespeare in <em>Henry IV</em> says, "The arms are fair when the intent of bearing them is just". What ethical implications does this have in governance? <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/ehi-q6">Model answer</a></p></li>
+<li><p><strong>Q3. (a)</strong> Dr. B. R. Ambedkar had cautioned that employing civil disobedience within a constitutional democracy equates to endorsing 'anarchy'. How should modern democracies navigate the ethical dilemmas posed by civil disobedience movements that aim to promote social justice against policies that may raise genuine concerns? <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/dimensions/ehi2-q4">Model answer</a></p></li>
+<li><p><strong>Q3. (b)</strong> In what ways can an Indian Administrative Officer apply Gandhi's notion of 'trusteeship' to ensure fairness in governance? <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/private-public/ehi3-q6">Model answer</a></p></li>
+<li><p><strong>Q3. (c)</strong> Shakespeare in <em>Henry IV</em> says, "The arms are fair when the intent of bearing them is just". What ethical implications does this have in governance? <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/essence/ehi1-q6">Model answer</a></p></li>
 <li><p><strong>Q4. (a)</strong> Citing the serious adverse effects of long-term medication, a doctor convinces the family of a female patient for surgery. This led the patient to reluctantly consent for the surgery, though her original choice was to opt for medication. Explain the concepts of paternalism and beneficence by analysing the doctor's action. <em>(150 words / 10 marks)</em></p></li>
 <li><p><strong>Q4. (b)</strong> Efficiency is doing things right, while effectiveness is doing the right thing. How do you strike a balance between the two to enhance productivity? <em>(150 words / 10 marks)</em></p></li>
 <li><p><strong>Q5. (a)</strong> Usually schools, working in remote areas, do not fully comply with government regulations. However, if the rules are enforced strictly, it would lead to most schools closing down. How should an administrator strike a balance between enforcement of rules and educational rights of children? <em>(150 words / 10 marks)</em></p></li>
 <li><p><strong>Q5. (b)</strong> In international relations, ethical considerations are often subjugated to the strategic interests of nation-states. Discuss this from an ethical perspective. <em>(150 words / 10 marks)</em></p></li>
-<li><p><strong>Q6. (a)</strong> On the request of his Personal Assistant (PA), the District Magistrate (DM) stops the transfer of a schoolteacher who takes private tuition for his daughter diagnosed with learning disability. In this context, discuss the aspects of empathy versus compliance with rules. <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/ehi-q33">Model answer</a></p></li>
-<li><p><strong>Q6. (b)</strong> Some moral philosophers argue that spending some of your resources—without significantly affecting your financial stability—to help other people who badly suffer is our moral duty and not merely a matter of charity. Justify this claim by explaining the distinction between duty and charity. <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/ehi-q34">Model answer</a></p></li>
+<li><p><strong>Q6. (a)</strong> On the request of his Personal Assistant (PA), the District Magistrate (DM) stops the transfer of a schoolteacher who takes private tuition for his daughter diagnosed with learning disability. In this context, discuss the aspects of empathy versus compliance with rules. <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/private-public/ehi3-q4">Model answer</a></p></li>
+<li><p><strong>Q6. (b)</strong> Some moral philosophers argue that spending some of your resources—without significantly affecting your financial stability—to help other people who badly suffer is our moral duty and not merely a matter of charity. Justify this claim by explaining the distinction between duty and charity. <em>(150 words / 10 marks)</em> <a class="ma" href="#/notes/human-interface/private-public/ehi3-q5">Model answer</a></p></li>
 </ul>
 <h3 id="y2026-sec2">SECTION-B</h3>
 <ul>
@@ -3930,13 +3953,13 @@ What do you understand by this statement in the present-day scenario? Explain. (
 </template>
 <script>
 const UE_TOC = [{"id": "s1", "level": "h2", "text": "FOUNDATIONAL CONCEPTS"}, {"id": "s2", "level": "h3", "text": "A. Ethics vs Morality vs Values vs Virtue vs Norms vs Conscience vs Etiquette/Custom"}, {"id": "s11", "level": "h3", "text": "B. Official and Thinker-Given Definitions/Quotes of Ethics"}, {"id": "s29", "level": "h3", "text": "C. Etymology and Historical Evolution of Ethics"}, {"id": "s36", "level": "h3", "text": "D. Ethics as a Normative vs Descriptive Discipline"}, {"id": "s39", "level": "h2", "text": "BRANCHES OF ETHICS"}, {"id": "s40", "level": "h3", "text": "A. Meta-ethics"}, {"id": "s45", "level": "h3", "text": "B. Normative Ethics"}, {"id": "s49", "level": "h3", "text": "C. Applied Ethics"}, {"id": "s56", "level": "h3", "text": "D. Descriptive Ethics"}, {"id": "s60", "level": "h2", "text": "MAJOR THEORETICAL APPROACHES TO ETHICS"}, {"id": "s61", "level": "h3", "text": "A. Consequentialism / Utilitarianism (Bentham, Mill) — Greatest Good for the Greatest Number"}, {"id": "s68", "level": "h3", "text": "B. Deontology (Kant) — Categorical Imperative, Duty for Duty's Sake"}, {"id": "s77", "level": "h3", "text": "C. Virtue Ethics (Aristotle) — Eudaimonia, the Golden Mean, Phronesis"}, {"id": "s87", "level": "h3", "text": "D. Care Ethics (Gilligan/Noddings) — Empathy, Relationship-Centred Morality"}];
-const EHI_TOC = [{"id": "h1", "level": "h2", "text": "ESSENCE, DETERMINANTS AND CONSEQUENCES OF ETHICS IN HUMAN ACTIONS"}, {"id": "h2", "level": "h3", "text": "Essence of Ethics — Its Core Nature"}, {"id": "h3", "level": "h4", "text": "A. Meaning of 'Values' and 'Ethics'; Interrelation; Link to Professional Competence"}, {"id": "h4", "level": "h4", "text": "B. Personal Ethics vs Professional Ethics"}, {"id": "h5", "level": "h4", "text": "C. Ethics vs Law"}, {"id": "h6", "level": "h4", "text": "D. Ethics vs Etiquette/Custom"}, {"id": "h7", "level": "h4", "text": "E. Universal/Eternal Values vs Relative/Changing Values — The Philosophical Debate"}, {"id": "h8", "level": "h4", "text": "F. Morality of Action: Means vs Ends"}, {"id": "h9", "level": "h4", "text": "G. Objectivism vs Subjectivism in Morality"}, {"id": "h10", "level": "h3", "text": "Determinants of Ethics — What Shapes Human Values and Conduct"}, {"id": "h11", "level": "h4", "text": "A. Individual-Level Determinants — Conscience, Reasoning Capacity, Upbringing, Personality, Life Experiences"}, {"id": "h12", "level": "h4", "text": "B. Socio-Cultural Determinants — Family, Religion, Tradition, Community, Education, Peer Influence"}, {"id": "h13", "level": "h4", "text": "C. Institutional/Legal Determinants — Laws, Codes of Conduct, Organizational Culture"}, {"id": "h14", "level": "h4", "text": "D. Biological/Evolutionary Roots of Morality"}, {"id": "h15", "level": "h4", "text": "E. Shared Moral Values as the Invisible Foundation of Law, Democracy, and Markets"}, {"id": "h16", "level": "h3", "text": "Consequences of Ethics — Impact and Outcomes"}, {"id": "h17", "level": "h4", "text": "A. On the Individual — Happiness, Well-being, Self-fulfilment"}, {"id": "h18", "level": "h4", "text": "B. On Society — Social Harmony, Trust, Cohesion, Collective Well-being"}, {"id": "h19", "level": "h4", "text": "C. On Governance and Public Administration"}, {"id": "h20", "level": "h4", "text": "D. On the Nation — Ethics as a Driver of Comprehensive National Power"}, {"id": "h21", "level": "h4", "text": "E. Consequences of Ethical Decline — The Crisis of Values"}, {"id": "h22", "level": "h2", "text": "DIMENSIONS OF ETHICS"}, {"id": "h23", "level": "h3", "text": "Understanding \"Dimensions\" of ethics"}, {"id": "h24", "level": "h4", "text": "A. Why Ethics Is Studied Through \"Dimensions\" Rather Than as One Flat Concept"}, {"id": "h25", "level": "h3", "text": "The Law–Ethics Dimension"}, {"id": "h26", "level": "h4", "text": "A. Ethics vs Law as Two Distinct but Overlapping Tools of Controlling Human Conduct"}, {"id": "h27", "level": "h4", "text": "B. The Gap Between Legal Permission and Moral Rightness"}, {"id": "h28", "level": "h3", "text": "The Fairness/Equity Dimension"}, {"id": "h29", "level": "h4", "text": "A. Discrimination vs Preferential Treatment"}, {"id": "h30", "level": "h4", "text": "B. The Justice Dimension — Contextual and Evolving Nature of Justice"}, {"id": "h31", "level": "h4", "text": "C. Distributive vs Procedural vs Restorative Justice"}, {"id": "h32", "level": "h3", "text": "The Cognitive/Psychological Dimension of Ethical Judgment"}, {"id": "h33", "level": "h4", "text": "A. Moral Intuition vs Moral Reasoning"}, {"id": "h34", "level": "h4", "text": "B. Moral Emotions — Guilt, Shame, Empathy, Indignation, Disgust"}, {"id": "h35", "level": "h3", "text": "The Multi-Dimensional Structure of Ethics Itself"}, {"id": "h36", "level": "h4", "text": "A. Key Dimensions of Ethics That Influence Human Action, and How They Shape Professional Decision-Making"}, {"id": "h37", "level": "h4", "text": "B. Individual vs Social vs Institutional Dimensions of Ethics"}, {"id": "h38", "level": "h3", "text": "The Environmental Dimension"}, {"id": "h39", "level": "h4", "text": "A. Meaning and Importance of Environmental Ethics"}, {"id": "h40", "level": "h4", "text": "B. Environmental Ethics vs Development — The Climate Crisis as an Ethical Failure"}, {"id": "h41", "level": "h4", "text": "C. Environmental Ethics vs National Security"}, {"id": "h42", "level": "h4", "text": "D. Intergenerational Justice — Obligations to Future, Not-Yet-Existing Generations"}, {"id": "h43", "level": "h3", "text": "The Technological Dimension"}, {"id": "h44", "level": "h4", "text": "A. Digital Technology and AI as Inputs into Ethical/Rational Decision-Making"}, {"id": "h45", "level": "h4", "text": "B. Social Media and the Ethics of Digital Communication"}, {"id": "h46", "level": "h4", "text": "C. Data Privacy and Surveillance"}, {"id": "h47", "level": "h2", "text": "ETHICS IN PRIVATE AND PUBLIC RELATIONSHIPS"}, {"id": "h48", "level": "h3", "text": "Understanding the Private-Public Distinction in Ethics"}, {"id": "h49", "level": "h4", "text": "A. What \"Private\" and \"Public\" Relationships Mean in an Ethical (Not Just Legal) Sense"}, {"id": "h50", "level": "h4", "text": "B. Why This Distinction Matters Specifically for a Civil Servant"}, {"id": "h51", "level": "h3", "text": "Ethics and Politics — Can the Two Coexist?"}, {"id": "h52", "level": "h4", "text": "A. The Classical Tension Between Political Power and Moral Conduct"}, {"id": "h53", "level": "h3", "text": "Human Beings as Ends, Not Merely Means — In Private and Public Life"}, {"id": "h54", "level": "h4", "text": "A. Kant's Principle Applied Specifically to Relationships"}, {"id": "h55", "level": "h3", "text": "Trust as the Currency of Private and Public Relationships"}, {"id": "h56", "level": "h4", "text": "A. The Trust-Deficit Problem — Causes and Consequences for Personal and Societal Well-being"}, {"id": "h57", "level": "h3", "text": "When Private Relationships Intrude into Public Duty"}, {"id": "h58", "level": "h4", "text": "A. Personal/Familial Requests Colliding with Official Responsibility — Empathy vs Rule-Compliance"}, {"id": "h59", "level": "h4", "text": "B. Nepotism, Favouritism, and the Ethical Boundary Between Compassion and Compromise"}, {"id": "h60", "level": "h3", "text": "Duty vs Charity — Are Private Obligations to Others a Matter of Choice or Obligation?"}, {"id": "h61", "level": "h4", "text": "A. The Moral-Philosophical Debate on Whether Helping Others in Need Is Duty or Discretionary Charity"}, {"id": "h62", "level": "h3", "text": "Family, Loyalty, and Public Office — The Structural Tension"}, {"id": "h63", "level": "h4", "text": "A. Gandhi's Concept of Trusteeship as a Bridge Between Private Wealth/Relationships and Public Fairness"}, {"id": "h64", "level": "h3", "text": "Professional Relationships as a Distinct Category"}, {"id": "h65", "level": "h4", "text": "A. Colleague, Mentor-Mentee, and Hierarchical Relationships Within Public Institutions"}];
+const SUBS = {"human-interface": [{"slug": "essence", "name": "Essence, Determinants and Consequences of Ethics in Human Actions", "toc": [{"id": "h2", "level": "h2", "text": "Essence of Ethics — Its Core Nature"}, {"id": "h3", "level": "h3", "text": "A. Meaning of 'Values' and 'Ethics'; Interrelation; Link to Professional Competence"}, {"id": "h4", "level": "h3", "text": "B. Personal Ethics vs Professional Ethics"}, {"id": "h5", "level": "h3", "text": "C. Ethics vs Law"}, {"id": "h6", "level": "h3", "text": "D. Ethics vs Etiquette/Custom"}, {"id": "h7", "level": "h3", "text": "E. Universal/Eternal Values vs Relative/Changing Values — The Philosophical Debate"}, {"id": "h8", "level": "h3", "text": "F. Morality of Action: Means vs Ends"}, {"id": "h9", "level": "h3", "text": "G. Objectivism vs Subjectivism in Morality"}, {"id": "h10", "level": "h2", "text": "Determinants of Ethics — What Shapes Human Values and Conduct"}, {"id": "h11", "level": "h3", "text": "A. Individual-Level Determinants — Conscience, Reasoning Capacity, Upbringing, Personality, Life Experiences"}, {"id": "h12", "level": "h3", "text": "B. Socio-Cultural Determinants — Family, Religion, Tradition, Community, Education, Peer Influence"}, {"id": "h13", "level": "h3", "text": "C. Institutional/Legal Determinants — Laws, Codes of Conduct, Organizational Culture"}, {"id": "h14", "level": "h3", "text": "D. Biological/Evolutionary Roots of Morality"}, {"id": "h15", "level": "h3", "text": "E. Shared Moral Values as the Invisible Foundation of Law, Democracy, and Markets"}, {"id": "h16", "level": "h2", "text": "Consequences of Ethics — Impact and Outcomes"}, {"id": "h17", "level": "h3", "text": "A. On the Individual — Happiness, Well-being, Self-fulfilment"}, {"id": "h18", "level": "h3", "text": "B. On Society — Social Harmony, Trust, Cohesion, Collective Well-being"}, {"id": "h19", "level": "h3", "text": "C. On Governance and Public Administration"}, {"id": "h20", "level": "h3", "text": "D. On the Nation — Ethics as a Driver of Comprehensive National Power"}, {"id": "h21", "level": "h3", "text": "E. Consequences of Ethical Decline — The Crisis of Values"}]}, {"slug": "dimensions", "name": "Dimensions of Ethics", "toc": [{"id": "h23", "level": "h2", "text": "Understanding \"Dimensions\" of ethics"}, {"id": "h24", "level": "h3", "text": "A. Why Ethics Is Studied Through \"Dimensions\" Rather Than as One Flat Concept"}, {"id": "h25", "level": "h2", "text": "The Law–Ethics Dimension"}, {"id": "h26", "level": "h3", "text": "A. Ethics vs Law as Two Distinct but Overlapping Tools of Controlling Human Conduct"}, {"id": "h27", "level": "h3", "text": "B. The Gap Between Legal Permission and Moral Rightness"}, {"id": "h28", "level": "h2", "text": "The Fairness/Equity Dimension"}, {"id": "h29", "level": "h3", "text": "A. Discrimination vs Preferential Treatment"}, {"id": "h30", "level": "h3", "text": "B. The Justice Dimension — Contextual and Evolving Nature of Justice"}, {"id": "h31", "level": "h3", "text": "C. Distributive vs Procedural vs Restorative Justice"}, {"id": "h32", "level": "h2", "text": "The Cognitive/Psychological Dimension of Ethical Judgment"}, {"id": "h33", "level": "h3", "text": "A. Moral Intuition vs Moral Reasoning"}, {"id": "h34", "level": "h3", "text": "B. Moral Emotions — Guilt, Shame, Empathy, Indignation, Disgust"}, {"id": "h35", "level": "h2", "text": "The Multi-Dimensional Structure of Ethics Itself"}, {"id": "h36", "level": "h3", "text": "A. Key Dimensions of Ethics That Influence Human Action, and How They Shape Professional Decision-Making"}, {"id": "h37", "level": "h3", "text": "B. Individual vs Social vs Institutional Dimensions of Ethics"}, {"id": "h38", "level": "h2", "text": "The Environmental Dimension"}, {"id": "h39", "level": "h3", "text": "A. Meaning and Importance of Environmental Ethics"}, {"id": "h40", "level": "h3", "text": "B. Environmental Ethics vs Development — The Climate Crisis as an Ethical Failure"}, {"id": "h41", "level": "h3", "text": "C. Environmental Ethics vs National Security"}, {"id": "h42", "level": "h3", "text": "D. Intergenerational Justice — Obligations to Future, Not-Yet-Existing Generations"}, {"id": "h43", "level": "h2", "text": "The Technological Dimension"}, {"id": "h44", "level": "h3", "text": "A. Digital Technology and AI as Inputs into Ethical/Rational Decision-Making"}, {"id": "h45", "level": "h3", "text": "B. Social Media and the Ethics of Digital Communication"}, {"id": "h46", "level": "h3", "text": "C. Data Privacy and Surveillance"}]}, {"slug": "private-public", "name": "Ethics in Private and Public Relationships", "toc": [{"id": "h48", "level": "h2", "text": "Understanding the Private-Public Distinction in Ethics"}, {"id": "h49", "level": "h3", "text": "A. What \"Private\" and \"Public\" Relationships Mean in an Ethical (Not Just Legal) Sense"}, {"id": "h50", "level": "h3", "text": "B. Why This Distinction Matters Specifically for a Civil Servant"}, {"id": "h51", "level": "h2", "text": "Ethics and Politics — Can the Two Coexist?"}, {"id": "h52", "level": "h3", "text": "A. The Classical Tension Between Political Power and Moral Conduct"}, {"id": "h53", "level": "h2", "text": "Human Beings as Ends, Not Merely Means — In Private and Public Life"}, {"id": "h54", "level": "h3", "text": "A. Kant's Principle Applied Specifically to Relationships"}, {"id": "h55", "level": "h2", "text": "Trust as the Currency of Private and Public Relationships"}, {"id": "h56", "level": "h3", "text": "A. The Trust-Deficit Problem — Causes and Consequences for Personal and Societal Well-being"}, {"id": "h57", "level": "h2", "text": "When Private Relationships Intrude into Public Duty"}, {"id": "h58", "level": "h3", "text": "A. Personal/Familial Requests Colliding with Official Responsibility — Empathy vs Rule-Compliance"}, {"id": "h59", "level": "h3", "text": "B. Nepotism, Favouritism, and the Ethical Boundary Between Compassion and Compromise"}, {"id": "h60", "level": "h2", "text": "Duty vs Charity — Are Private Obligations to Others a Matter of Choice or Obligation?"}, {"id": "h61", "level": "h3", "text": "A. The Moral-Philosophical Debate on Whether Helping Others in Need Is Duty or Discretionary Charity"}, {"id": "h62", "level": "h2", "text": "Family, Loyalty, and Public Office — The Structural Tension"}, {"id": "h63", "level": "h3", "text": "A. Gandhi's Concept of Trusteeship as a Bridge Between Private Wealth/Relationships and Public Fairness"}, {"id": "h64", "level": "h2", "text": "Professional Relationships as a Distinct Category"}, {"id": "h65", "level": "h3", "text": "A. Colleague, Mentor-Mentee, and Hierarchical Relationships Within Public Institutions"}]}, {"slug": "human-values", "name": "Human Values — Lessons from the Lives and Teachings of Great Leaders, Reformers and Administrators", "toc": []}, {"slug": "inculcating-values", "name": "Role of Family Society and Educational Institutions in Inculcating Values", "toc": []}], "attitude": [{"slug": "content-structure-function", "name": "Content, Structure, Function", "toc": []}, {"slug": "thought-behaviour", "name": "Its Influence and Relation with Thought and Behaviour", "toc": []}, {"slug": "moral-political", "name": "Moral and Political Attitudes", "toc": []}, {"slug": "influence-persuasion", "name": "Social Influence and Persuasion", "toc": []}], "aptitude": [{"slug": "aptitude-foundational", "name": "Aptitude and Foundational Values for Civil Service", "toc": []}, {"slug": "integrity", "name": "Integrity", "toc": []}, {"slug": "impartiality", "name": "Impartiality and Non-partisanship", "toc": []}, {"slug": "objectivity", "name": "Objectivity", "toc": []}, {"slug": "dedication", "name": "Dedication to Public Service", "toc": []}, {"slug": "empathy-tolerance", "name": "Empathy, Tolerance and Compassion towards the Weaker Sections", "toc": []}], "emotional-intelligence": [{"slug": "concepts", "name": "Emotional Intelligence — Concepts", "toc": []}, {"slug": "utility-application", "name": "Utilities and Application in Administration and Governance", "toc": []}], "moral-thinkers": [{"slug": "india", "name": "Moral Thinkers and Philosophers from India", "toc": []}, {"slug": "world", "name": "Moral Thinkers and Philosophers from the World", "toc": []}], "public-service-values": [{"slug": "status-problems", "name": "Status and Problems", "toc": []}, {"slug": "concerns-dilemmas", "name": "Ethical Concerns and Dilemmas in Government and Private Institutions", "toc": []}, {"slug": "sources-guidance", "name": "Laws, Rules, Regulations and Conscience as Sources of Ethical Guidance", "toc": []}, {"slug": "accountability", "name": "Accountability and Ethical Governance", "toc": []}, {"slug": "strengthening", "name": "Strengthening of Ethical and Moral Values in Governance", "toc": []}, {"slug": "international", "name": "Ethical Issues in International Relations and Funding", "toc": []}, {"slug": "corporate-governance", "name": "Corporate Governance", "toc": []}], "probity": [{"slug": "public-service", "name": "Concept of Public Service", "toc": []}, {"slug": "philosophical-basis", "name": "Philosophical Basis of Governance and Probity", "toc": []}, {"slug": "transparency", "name": "Information Sharing and Transparency in Government", "toc": []}, {"slug": "rti", "name": "Right to Information", "toc": []}, {"slug": "codes-ethics", "name": "Codes of Ethics", "toc": []}, {"slug": "codes-conduct", "name": "Codes of Conduct", "toc": []}, {"slug": "citizens-charters", "name": "Citizen's Charters", "toc": []}, {"slug": "work-culture", "name": "Work Culture", "toc": []}, {"slug": "service-delivery", "name": "Quality of Service Delivery", "toc": []}, {"slug": "public-funds", "name": "Utilization of Public Funds", "toc": []}, {"slug": "corruption", "name": "Challenges of Corruption", "toc": []}]};
 
 // To add notes for a part later: put them in a <template id="notes-ID"> and set ready:true.
 const PARTS = [
   {id:"understanding-ethics", name:"Understanding Ethics", ready:true, toc:UE_TOC,
    scope:"Foundational concepts, branches of ethics and the major theoretical approaches to ethics."},
-  {id:"human-interface", name:"Ethics and Human Interface", ready:true, toc:EHI_TOC,
+  {id:"human-interface", name:"Ethics and Human Interface", ready:false,
    scope:"Ethics and Human Interface: Essence, Determinants and Consequences of Ethics in - Human Actions; Dimensions of Ethics; Ethics - in Private and Public Relationships. Human Values - Lessons from the Lives and Teachings of Great Leaders, Reformers and Administrators; Role of Family Society and Educational Institutions in Inculcating Values."},
   {id:"attitude", name:"Attitude", ready:false,
    scope:"Attitude: Content, Structure, Function; its Influence and Relation with Thought and Behaviour; Moral and Political Attitudes; Social Influence and Persuasion."},
@@ -3953,6 +3976,11 @@ const PARTS = [
   {id:"case-studies", name:"Case Studies", ready:false,
    scope:"Case Studies on above issues."}
 ];
+PARTS.forEach(p => {
+  if (!SUBS[p.id]) return;
+  p.subs = SUBS[p.id].map(s => Object.assign({}, s, {ready: !!document.getElementById(`notes-${p.id}--${s.slug}`)}));
+  p.ready = p.subs.some(s => s.ready);
+});
 const TOPICS = PARTS.slice(1);
 
 // Years 2013–2026. Set ready:true and add a <template id="paper-YEAR"> when a paper is added.
@@ -4079,10 +4107,11 @@ function pager(i){
     ${next ? `<a class="next" href="#/notes/${next.id}"><span class="pl">Next</span><span class="pn">${esc(next.name)}</span></a>` : ""}
   </nav>`;
 }
-function viewNotes(id){
+function viewNotes(id, sub){
   const i = PARTS.findIndex(p => p.id === id);
   if (i < 0) return null;
   const p = PARTS[i];
+  if (p.subs) return sub ? viewSub(p, i, sub) : viewTopic(p, i);
   const tpl = document.getElementById("notes-" + id);
   const head = `<p class="crumb"><a href="#/">Home</a></p><h1 class="title">${esc(p.name)}</h1>`;
   if (!p.ready || !tpl){
@@ -4090,16 +4119,58 @@ function viewNotes(id){
       <div class="empty"><p class="scope">${esc(p.scope)}</p><p>Notes for this part haven't been added yet.</p></div>
       <div style="max-width:760px">${pager(i)}</div></div>`;
   }
-  const toc = p.toc || [];
+  return notesLayout(head, tpl.innerHTML, p.toc || [], pager(i));
+}
+function notesLayout(head, body, toc, pg){
   return `<div class="wrap page layout">
     <article>
       ${head}
       ${toc.length ? `<details class="inline-toc"><summary>Contents</summary><div class="list">${tocLinks(toc)}</div></details>` : ""}
-      <div class="notes">${tpl.innerHTML}</div>
-      ${pager(i)}
+      <div class="notes">${body}</div>
+      ${pg}
     </article>
     ${toc.length ? `<aside class="rail" aria-label="Contents"><div class="rh">Contents</div>${tocLinks(toc)}</aside>` : ""}
   </div>`;
+}
+function viewTopic(p, i){
+  const done = p.subs.filter(s => s.ready).length;
+  const rows = p.subs.map((s, k) => {
+    const secs = s.ready ? s.toc.filter(t => t.level === "h2") : [];
+    return `<li class="sub${s.ready ? " ready" : ""}">
+      <span class="num">${k + 1}</span>
+      <div class="sub-body">
+        <a class="sub-name" href="#/notes/${p.id}/${s.slug}">${esc(s.name)}</a>
+        <span class="sub-st">${s.ready ? `${secs.length} sections` : "Notes coming"}</span>
+        ${secs.length ? `<div class="chips">${secs.map(t => `<a href="#/notes/${p.id}/${s.slug}/${t.id}">${esc(t.text)}</a>`).join("")}</div>` : ""}
+      </div></li>`;
+  }).join("");
+  return `<div class="wrap page"><div style="max-width:900px">
+    <p class="crumb"><a href="#/">Home</a></p>
+    <h1 class="title">${esc(p.name)}</h1>
+    <p class="lede">${p.subs.length} parts in the syllabus${done ? `, notes added for ${done}` : ""}.</p>
+    <ol class="subs">${rows}</ol>
+    ${pager(i)}</div></div>`;
+}
+function viewSub(p, i, slug){
+  const k = p.subs.findIndex(s => s.slug === slug);
+  if (k < 0) return null;
+  const s = p.subs[k];
+  const prev = k > 0 ? {href:`#/notes/${p.id}/${p.subs[k-1].slug}`, name:p.subs[k-1].name, l:"Previous part"}
+                     : {href:`#/notes/${p.id}`, name:p.name, l:"Back to"};
+  const nt = PARTS[i+1];
+  const next = k < p.subs.length - 1 ? {href:`#/notes/${p.id}/${p.subs[k+1].slug}`, name:p.subs[k+1].name, l:"Next part"}
+                     : (nt ? {href:`#/notes/${nt.id}`, name:nt.name, l:"Next topic"} : null);
+  const pg = `<nav class="pager" aria-label="More notes">
+    <a href="${prev.href}"><span class="pl">${prev.l}</span><span class="pn">${esc(prev.name)}</span></a>
+    ${next ? `<a class="next" href="${next.href}"><span class="pl">${next.l}</span><span class="pn">${esc(next.name)}</span></a>` : ""}
+  </nav>`;
+  const head = `<p class="crumb"><a href="#/">Home</a> <span aria-hidden="true">/</span> <a href="#/notes/${p.id}">${esc(p.name)}</a></p>
+    <p class="partno">Part ${k + 1} of ${p.subs.length}</p>
+    <h1 class="title sub-title">${esc(s.name)}</h1>`;
+  const tpl = document.getElementById(`notes-${p.id}--${s.slug}`);
+  if (!tpl) return `<div class="wrap page"><div style="max-width:760px">${head}
+      <div class="empty"><p>Notes for this part haven't been added yet.</p></div>${pg}</div></div>`;
+  return notesLayout(head, tpl.innerHTML, s.toc, pg);
 }
 function viewPapers(){
   const cards = YEARS.map(y => `<a href="#/papers/${y.year}"><div class="y">${y.year}</div>
@@ -4141,9 +4212,11 @@ function render(){
   if (route === "" || route === "home"){ route = "home"; html = viewHome(); }
   else if (route === "syllabus") html = viewSyllabus();
   else if (route.startsWith("notes/")){
-    const [id, sec] = route.slice(6).split("/");
-    route = "notes/" + id; jump = sec || null;
-    html = viewNotes(id);
+    const seg = route.slice(6).split("/"), id = seg[0];
+    const pt = PARTS.find(x => x.id === id);
+    route = "notes/" + id;
+    if (pt && pt.subs){ jump = seg[2] || null; html = viewNotes(id, seg[1] || null); }
+    else { jump = seg[1] || null; html = viewNotes(id); }
   }
   else if (route === "papers") html = viewPapers();
   else if (route.startsWith("papers/")) html = viewYear(route.slice(7));
